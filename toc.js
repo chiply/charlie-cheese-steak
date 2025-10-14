@@ -1,6 +1,7 @@
 // Followable, scrollable table of contents
 window.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
+        console.log('observed');
         entries.forEach((entry) => {
             if (entry.target.getAttribute("id") === "text-tldr") {
                 return;
@@ -54,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     if (entry.intersectionRatio > 0) {
                         tocLink.scrollIntoView({
                             behavior: "smooth",
-                            block: "nearest",
+                            block: "center",
                         });
                     }
                 }
@@ -71,7 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
     ];
 
     headings.forEach((heading) => observer.observe(heading));
-});
+}, { passive: true });
 
 // Clickable ToC
 document.addEventListener("DOMContentLoaded", function () {

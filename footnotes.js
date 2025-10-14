@@ -1,6 +1,7 @@
 // Followable, scrollable footnotes
 window.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
+        console.log('observed');
         entries.forEach((entry) => {
             // ignore if entry is child of #content-clone
             if (entry.target.closest("#content-clone")) {
@@ -25,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (entry.intersectionRatio > 0) {
                     fnLink.scrollIntoView({
                         behavior: "smooth",
-                        block: "nearest",
+                        block: "center",
                     });
                 }
             }
@@ -36,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const headings = [...document.querySelectorAll("sup a.footref")];
 
     headings.forEach((heading) => observer.observe(heading));
-});
+}, { passive: true });
 
 // Clickable Footnotes
 document.addEventListener("DOMContentLoaded", function () {

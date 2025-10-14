@@ -111,6 +111,7 @@ window.addEventListener("resize", function () {
 // is ambigious and just happens to return the correct one
 window.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
+        console.log('observed');
         entries.forEach((entry) => {
             // if entry is a child of #minimap ignore it
             if (entry.target.closest("#outline-container-tldr")) {
@@ -138,7 +139,12 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     // Collect all headings and outline divs
-    const headings = [...document.querySelectorAll("#content *")];
+    const headings = [
+        //...document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"),
+        ...document.querySelectorAll(
+            "div.outline-text-2, div.outline-text-3, div.outline-text-4, div.outline-text-5, div.outline-text-6",
+        ),
+    ];
 
     headings.forEach((heading) => observer.observe(heading));
-});
+}, { passive: true });
