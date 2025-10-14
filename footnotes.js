@@ -1,43 +1,84 @@
-// Followable, scrollable footnotes
-window.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        console.log('observed');
-        entries.forEach((entry) => {
-            // ignore if entry is child of #content-clone
-            if (entry.target.closest("#content-clone")) {
-                return;
-            }
-            // Check if target is an outline-text div
-            id = entry.target.getAttribute("id");
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan = 0; // Set lastRan to a default value
 
-            const fnLink = document
-                .querySelector(`#footnotes sup a[href="#${id}"]`)
-                .closest("sup")
-                .nextElementSibling.querySelector("p");
-            const fnLink1 = document.querySelector(
-                `#footnotes sup a[href="#${id}"]`,
+    return function (...args) {
+        const context = this;
+        if (!lastRan) {
+            // If the function hasn't run yet
+            func.apply(context, args);
+            lastRan = Date.now(); // Set lastRan to now
+        } else {
+            clearTimeout(lastFunc); // Clear the timeout if another call comes in
+            lastFunc = setTimeout(
+                () => {
+                    if (Date.now() - lastRan >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now(); // Update lastRan
+                    }
+                },
+                limit - (Date.now() - lastRan),
             );
-            if (fnLink) {
-                const action = entry.intersectionRatio > 0 ? "add" : "remove";
-                fnLink.classList[action]("active");
-                fnLink1.classList[action]("active");
+        }
+    };
+}
 
-                // Scroll active link into view
-                if (entry.intersectionRatio > 0) {
-                    fnLink.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                    });
-                }
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+const observerCallbackFootnotes = (entries) => {
+    console.log("observed");
+    entries.forEach((entry) => {
+        // ignore if entry is child of #content-clone
+        if (entry.target.closest("#content-clone")) {
+            return;
+        }
+        // Check if target is an outline-text div
+        id = entry.target.getAttribute("id");
+
+        const fnLink = document
+            .querySelector(`#footnotes sup a[href="#${id}"]`)
+            .closest("sup")
+            .nextElementSibling.querySelector("p");
+        const fnLink1 = document.querySelector(
+            `#footnotes sup a[href="#${id}"]`,
+        );
+        if (fnLink) {
+            const action = entry.intersectionRatio > 0 ? "add" : "remove";
+            fnLink.classList[action]("active");
+            fnLink1.classList[action]("active");
+
+            // Scroll active link into view
+            if (entry.intersectionRatio > 0) {
+                fnLink.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
             }
-        });
+        }
     });
+};
 
-    // Collect all headings and outline divs
-    const headings = [...document.querySelectorAll("sup a.footref")];
+// Followable, scrollable footnotes
+window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+        const observer = new IntersectionObserver(
+            debounce(observerCallbackFootnotes, 100),
+        );
 
-    headings.forEach((heading) => observer.observe(heading));
-}, { passive: true });
+        // Collect all headings and outline divs
+        const headings = [...document.querySelectorAll("sup a.footref")];
+
+        headings.forEach((heading) => observer.observe(heading));
+    },
+    { passive: true },
+);
 
 // Clickable Footnotes
 document.addEventListener("DOMContentLoaded", function () {
@@ -61,5 +102,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-

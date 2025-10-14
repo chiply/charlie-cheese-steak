@@ -1,3 +1,64 @@
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan = 0; // Set lastRan to a default value
+
+    return function (...args) {
+        const context = this;
+        if (!lastRan) {
+            // If the function hasn't run yet
+            func.apply(context, args);
+            lastRan = Date.now(); // Set lastRan to now
+        } else {
+            clearTimeout(lastFunc); // Clear the timeout if another call comes in
+            lastFunc = setTimeout(
+                () => {
+                    if (Date.now() - lastRan >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now(); // Update lastRan
+                    }
+                },
+                limit - (Date.now() - lastRan),
+            );
+        }
+    };
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+const observerCallbackMinimap = (entries) => {
+    console.log("observed");
+    entries.forEach((entry) => {
+        // if entry is a child of #minimap ignore it
+        if (entry.target.closest("#outline-container-tldr")) {
+            return;
+        }
+        // if entry is a child of #minimap ignore it
+        if (entry.target.closest("#minimap-container")) {
+            return;
+        }
+        let id = "";
+        // Check if target is an outline-text div
+        id = entry.target.getAttribute("id");
+
+        id = CSS.escape(id);
+        const elementLink = document.querySelector(`#${id}`);
+        if (elementLink) {
+            if (entry.intersectionRatio > 0) {
+                elementLink.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
+            }
+        }
+    });
+};
+
 // minimap
 function minimap_update(called) {
     // Parameters
@@ -109,42 +170,22 @@ window.addEventListener("resize", function () {
 
 // autoscroll minimap TODO fix this as I think the get attribute by id
 // is ambigious and just happens to return the correct one
-window.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        console.log('observed');
-        entries.forEach((entry) => {
-            // if entry is a child of #minimap ignore it
-            if (entry.target.closest("#outline-container-tldr")) {
-                return;
-            }
-            // if entry is a child of #minimap ignore it
-            if (entry.target.closest("#minimap-container")) {
-                return;
-            }
-            let id = "";
-            // Check if target is an outline-text div
-            id = entry.target.getAttribute("id");
+window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+        const observer = new IntersectionObserver(
+            debounce(observerCallbackMinimap, 100),
+        );
 
-            id = CSS.escape(id);
-            const elementLink = document.querySelector(`#${id}`);
-            if (elementLink) {
-                if (entry.intersectionRatio > 0) {
-                    elementLink.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                    });
-                }
-            }
-        });
-    });
+        // Collect all headings and outline divs
+        const headings = [
+            //...document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"),
+            ...document.querySelectorAll(
+                "div.outline-text-2, div.outline-text-3, div.outline-text-4, div.outline-text-5, div.outline-text-6",
+            ),
+        ];
 
-    // Collect all headings and outline divs
-    const headings = [
-        //...document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"),
-        ...document.querySelectorAll(
-            "div.outline-text-2, div.outline-text-3, div.outline-text-4, div.outline-text-5, div.outline-text-6",
-        ),
-    ];
-
-    headings.forEach((heading) => observer.observe(heading));
-}, { passive: true });
+        headings.forEach((heading) => observer.observe(heading));
+    },
+    { passive: true },
+);

@@ -1,78 +1,117 @@
-// Followable, scrollable table of contents
-window.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-        console.log('observed');
-        entries.forEach((entry) => {
-            if (entry.target.getAttribute("id") === "text-tldr") {
-                return;
-            }
-            // ignore if entry is child of #content-clone
-            if (entry.target.closest("#content-clone")) {
-                return;
-            }
-            let id = "";
-            // empty headings
-            if (entry.target.tagName.match(/^H[2-6]$/)) {
-                id = entry.target.getAttribute("id") || "";
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan = 0; // Set lastRan to a default value
 
-                const tocLink = document.querySelector(
-                    `#text-table-of-contents a[href="#${id}"]`,
-                );
-                const nextSibling = entry.target.nextElementSibling;
-                if (tocLink && !nextSibling) {
-                    const action =
-                        entry.intersectionRatio > 0 ? "add" : "remove";
-                    tocLink.parentElement.classList[action]("active");
-
-                    // Scroll active link into view
-                    if (entry.intersectionRatio > 0) {
-                        tocLink.scrollIntoView({
-                            behavior: "smooth",
-                            block: "nearest",
-                        });
+    return function (...args) {
+        const context = this;
+        if (!lastRan) {
+            // If the function hasn't run yet
+            func.apply(context, args);
+            lastRan = Date.now(); // Set lastRan to now
+        } else {
+            clearTimeout(lastFunc); // Clear the timeout if another call comes in
+            lastFunc = setTimeout(
+                () => {
+                    if (Date.now() - lastRan >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now(); // Update lastRan
                     }
+                },
+                limit - (Date.now() - lastRan),
+            );
+        }
+    };
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+const observerCallbackToC = (entries) => {
+    console.log("observed");
+    entries.forEach((entry) => {
+        if (entry.target.getAttribute("id") === "text-tldr") {
+            return;
+        }
+        // ignore if entry is child of #content-clone
+        if (entry.target.closest("#content-clone")) {
+            return;
+        }
+        let id = "";
+        // empty headings
+        if (entry.target.tagName.match(/^H[2-6]$/)) {
+            id = entry.target.getAttribute("id") || "";
+
+            const tocLink = document.querySelector(
+                `#text-table-of-contents a[href="#${id}"]`,
+            );
+            const nextSibling = entry.target.nextElementSibling;
+            if (tocLink && !nextSibling) {
+                const action = entry.intersectionRatio > 0 ? "add" : "remove";
+                tocLink.parentElement.classList[action]("active");
+
+                // Scroll active link into view
+                if (entry.intersectionRatio > 0) {
+                    tocLink.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                    });
                 }
             }
+        }
 
-            // Check if target is an outline-text div
-            if (
-                entry.target.tagName === "DIV" &&
-                entry.target.className.match(/outline-text-[2-6]/)
-            ) {
-                id =
-                    entry.target.previousElementSibling?.getAttribute("id") ||
-                    "";
+        // Check if target is an outline-text div
+        if (
+            entry.target.tagName === "DIV" &&
+            entry.target.className.match(/outline-text-[2-6]/)
+        ) {
+            id = entry.target.previousElementSibling?.getAttribute("id") || "";
 
-                const tocLink = document.querySelector(
-                    `#text-table-of-contents a[href="#${id}"]`,
-                );
-                if (tocLink) {
-                    const action =
-                        entry.intersectionRatio > 0 ? "add" : "remove";
-                    tocLink.parentElement.classList[action]("active");
+            const tocLink = document.querySelector(
+                `#text-table-of-contents a[href="#${id}"]`,
+            );
+            if (tocLink) {
+                const action = entry.intersectionRatio > 0 ? "add" : "remove";
+                tocLink.parentElement.classList[action]("active");
 
-                    // Scroll active link into view
-                    if (entry.intersectionRatio > 0) {
-                        tocLink.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center",
-                        });
-                    }
+                // Scroll active link into view
+                if (entry.intersectionRatio > 0) {
+                    tocLink.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                    });
                 }
             }
-        });
+        }
     });
+};
 
-    // Collect all headings and outline divs
-    const headings = [
-        ...document.querySelectorAll("h2[id], h3[id], h4[id], h5[id], h6[id]"),
-        ...document.querySelectorAll(
-            "div.outline-text-2, div.outline-text-3, div.outline-text-4, div.outline-text-5, div.outline-text-6",
-        ),
-    ];
+// Followable, scrollable table of contents
+window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+        const observer = new IntersectionObserver(
+            debounce(observerCallbackToC, 100),
+        );
 
-    headings.forEach((heading) => observer.observe(heading));
-}, { passive: true });
+        // Collect all headings and outline divs
+        const headings = [
+            ...document.querySelectorAll(
+                "h2[id], h3[id], h4[id], h5[id], h6[id]",
+            ),
+            ...document.querySelectorAll(
+                "div.outline-text-2, div.outline-text-3, div.outline-text-4, div.outline-text-5, div.outline-text-6",
+            ),
+        ];
+
+        headings.forEach((heading) => observer.observe(heading));
+    },
+    { passive: true },
+);
 
 // Clickable ToC
 document.addEventListener("DOMContentLoaded", function () {
