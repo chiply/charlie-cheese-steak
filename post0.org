@@ -41,13 +41,6 @@ NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the defa
 <link rel="stylesheet" href="tldr.css">
 <link rel="stylesheet" href="post0.css">
 
-<script src="global.js"></script>
-<script src="toc.js"></script>
-<script src="foldable-headings.js"></script>
-<script src="footnotes.js"></script>
-<script src="progress-bar.js"></script>
-<script src="minimap.js"></script>
-<script src="tldr.js"></script>
 
 <script src="post0.js"></script>
 #+end_export

@@ -1,3 +1,5 @@
+THROTTLE = false;
+
 function throttle(func, limit) {
     let lastFunc;
     let lastRan = 0; // Set lastRan to a default value
@@ -94,7 +96,9 @@ window.addEventListener(
     "DOMContentLoaded",
     () => {
         const observer = new IntersectionObserver(
-            debounce(observerCallbackTldr, 100),
+            THROTTLE
+                ? throttle(observerCallbackTldr, 100)
+                : observerCallbackTldr,
         );
 
         // Collect all headings and outline divs
