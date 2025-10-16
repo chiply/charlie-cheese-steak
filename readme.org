@@ -14,6 +14,8 @@
 
 * TODO
 JS
+// TODO: svelte?
+// TODO: scrub progress bar to fast scroll
 // TODO: click propogate for folding -- couple issues, first, make it clear what heading you're folding
 // TODO: animate folding -- why isn't it working?
 // TODO: add copy button to code blocks
@@ -39,6 +41,7 @@ JS
 // TODO: echo keystrokes for user feedback
 
 CSS
+/* overflow rule for css charts on mobile, stack all horizontally */
 /* TODO: Add indentation for first 3 levels (subtle) */
 /* TODO refactor CSS to use variables for things like color and size */
 /* TODO add underlines to the headings?  Some kind of visual distinction between and header and a paragraph, extra points if the styling makes the headins look more clickable */
