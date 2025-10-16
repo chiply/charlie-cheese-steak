@@ -16,7 +16,7 @@ NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the defa
 #+begin_export html
 <div id="progressBar"></div>
 
-<div id="minimap-container">
+<div id="minimap-container" class="desktop-only">
   <div id="minimap">
     <div id="minimap-viewport"></div>
     <!-- The content will be cloned here by JavaScript -->
@@ -32,6 +32,7 @@ NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the defa
 
 ** link to CSS and JSS scripts
 #+begin_export html
+
 <link rel="stylesheet" href="global.css">
 <link rel="stylesheet" href="toc.css">
 <link rel="stylesheet" href="foldable-headings.css">
@@ -47,6 +48,7 @@ NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the defa
 <script src="footnotes.js"></script>
 <script src="progress-bar.js"></script>
 <script src="tldr.js"></script>
+<script src="minimap.js"></script>
 
 <script src="post0.js"></script>
 #+end_export
