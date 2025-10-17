@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-10-16 Thu 09:20 -->
+<!-- 2025-10-17 Fri 12:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>post0</title>
@@ -194,6 +194,7 @@
   .org-svg { }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link href="https://cdn.jsdelivr.net/npm/@exuanbo/file-icons-js@latest/dist/css/file-icons.min.css" rel="stylesheet">
 </head>
 <body>
 <div id="content" class="content">
@@ -202,159 +203,1115 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3b85a42">1. Progress bar</a></li>
-<li><a href="#org5464432">2. Features to make building easier</a></li>
-<li><a href="#orga77bea9">3. narrative</a>
+<li><a href="#org98f5f15">1. Inclusion from another org file</a>
 <ul>
-<li><a href="#org28f8327">3.1. link to CSS and JSS scripts</a></li>
-<li><a href="#org95db5fe">3.2. Long paragraph</a></li>
-<li><a href="#org09ae82b">3.3. <span class="todo TODO">TODO</span> prompt LLM (is there an org gptel or something similar?)</a></li>
-<li><a href="#org83a3afe">3.4. layout</a>
-<ul>
-<li><a href="#my-custom-section">3.4.1. css grid</a></li>
+<li><a href="#orga49c62f">1.1. Hello from post nested</a></li>
 </ul>
 </li>
-<li><a href="#org4312e29">3.5. internal links</a></li>
-<li><a href="#orge6f63f4">3.6. global header / site style</a></li>
-<li><a href="#org164ff7a">3.7. <span class="done DONE">DONE</span> styling</a>
+<li><a href="#org961e86d">2. iconography</a></li>
+<li><a href="#org451f946">3. Progress bar</a></li>
+<li><a href="#org2118960">4. Features to make building easier</a></li>
+<li><a href="#orgd1cbb3a">5. narrative</a>
 <ul>
-<li><a href="#org6bec740">3.7.1. <span class="done DONE">DONE</span> inline css</a></li>
-<li><a href="#org71d9130">3.7.2. <span class="done DONE">DONE</span> org-html-themes</a></li>
-<li><a href="#orge64046c">3.7.3. <span class="done DONE">DONE</span> css (see above)</a>
+<li><a href="#org3b054c4">5.1. link to CSS and JSS scripts</a></li>
+<li><a href="#org8f7d80e">5.2. Long paragraph</a></li>
+<li><a href="#org4ccd593">5.3. <span class="todo TODO">TODO</span> prompt LLM (is there an org gptel or something similar?)</a></li>
+<li><a href="#org83d3fbf">5.4. layout</a>
 <ul>
-<li><a href="#orgf7c4817">3.7.3.1. <span class="done DONE">DONE</span> global css</a></li>
-<li><a href="#orgda3e1b2">3.7.3.2. <span class="done DONE">DONE</span> local css</a></li>
+<li><a href="#my-custom-section">5.4.1. css grid</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org2af5609">3.8. <span class="todo TODO">TODO</span> basic org stuff</a></li>
-<li><a href="#org50a00d1">3.9. <span class="todo TODO">TODO</span> text</a>
+<li><a href="#org3e9be42">5.5. internal links</a></li>
+<li><a href="#org3b6d861">5.6. global header / site style</a></li>
+<li><a href="#org4cae216">5.7. <span class="done DONE">DONE</span> styling</a>
 <ul>
-<li><a href="#org383d7c0">3.9.1. long paragraph</a></li>
-<li><a href="#orgaeffb7b">3.9.2. long paragraph scrolling text</a></li>
-<li><a href="#orgaa7d00e">3.9.3. quote</a></li>
-</ul>
-</li>
-<li><a href="#orgd7a7b18">3.10. tags&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag0">tag0</span>&#xa0;<span class="tag1">tag1</span></span></a>
+<li><a href="#org85da7b2">5.7.1. <span class="done DONE">DONE</span> inline css</a></li>
+<li><a href="#orgb9bb4af">5.7.2. <span class="done DONE">DONE</span> org-html-themes</a></li>
+<li><a href="#orgdefc186">5.7.3. <span class="done DONE">DONE</span> css (see above)</a>
 <ul>
-<li><a href="#orge73feb9">3.10.1. <span class="done DONE">DONE</span> test todo item 2</a></li>
-<li><a href="#org72deb41">3.10.2. <span class="done DONE">DONE</span> table</a></li>
-<li><a href="#org879c67f">3.10.3. <span class="todo TODO">TODO</span> lists</a>
-<ul>
-<li><a href="#org63ea38c">3.10.3.1. <span class="todo TODO">TODO</span> bullets</a></li>
-<li><a href="#orgc5ec1db">3.10.3.2. <span class="todo TODO">TODO</span> numbers</a></li>
-</ul>
-</li>
-<li><a href="#orgb756094">3.10.4. <span class="todo TODO">TODO</span> formatting</a></li>
-</ul>
-</li>
-<li><a href="#org2c1911f">3.11. <span class="todo TODO">TODO</span> code</a>
-<ul>
-<li><a href="#org5d6e2ef">3.11.1. <span class="todo TODO">TODO</span> bash</a></li>
-<li><a href="#orgd2f82a2">3.11.2. <span class="todo TODO">TODO</span> python</a>
-<ul>
-<li><a href="#orgeecae63">3.11.2.1. <span class="todo TODO">TODO</span> using venv</a></li>
-<li><a href="#orge3b509a">3.11.2.2. <span class="todo TODO">TODO</span> using multiple venvs via session</a></li>
-<li><a href="#org0ece833">3.11.2.3. <span class="todo TODO">TODO</span> using session to pass state between blocks</a></li>
+<li><a href="#org461e07e">5.7.3.1. <span class="done DONE">DONE</span> global css</a></li>
+<li><a href="#org073164b">5.7.3.2. <span class="done DONE">DONE</span> local css</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org81cf59f">3.12. <span class="todo TODO">TODO</span> video (test with git lfs)</a></li>
-<li><a href="#org2efd4ef">3.13. <span class="todo TODO">TODO</span> image</a>
+<li><a href="#org8cfdd52">5.8. <span class="todo TODO">TODO</span> basic org stuff</a></li>
+<li><a href="#org6d4be06">5.9. <span class="todo TODO">TODO</span> text</a>
 <ul>
-<li><a href="#orgdd1125e">3.13.1. <span class="done DONE">DONE</span> local file</a></li>
-<li><a href="#org52a67dd">3.13.2. <span class="todo TODO">TODO</span> remote file</a></li>
-<li><a href="#org11cd727">3.13.3. <span class="todo TODO">TODO</span> svg</a></li>
+<li><a href="#org698ba38">5.9.1. long paragraph</a></li>
+<li><a href="#org59f693e">5.9.2. long paragraph scrolling text</a></li>
+<li><a href="#org48efce8">5.9.3. quote</a></li>
 </ul>
 </li>
-<li><a href="#org180da3f">3.14. <span class="done DONE">DONE</span> general iframe</a></li>
-<li><a href="#org6212128">3.15. <span class="done DONE">DONE</span> plotly chart</a></li>
-<li><a href="#org87d38b2">3.16. <span class="done DONE">DONE</span> mermaid diagrams</a></li>
-<li><a href="#org1ac3429">3.17. <span class="todo TODO">TODO</span> verbs</a></li>
-<li><a href="#org5930fc0">3.18. <span class="todo TODO">TODO</span> footnotes NOTE issue</a>
+<li><a href="#org4a98095">5.10. tags&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag0">tag0</span>&#xa0;<span class="tag1">tag1</span></span></a>
 <ul>
-<li><a href="#orgc283a8a">3.18.1. Another footnote</a></li>
-</ul>
-</li>
-<li><a href="#org0988756">3.19. <span class="todo TODO">TODO</span> transclude? compose with other file?</a>
+<li><a href="#orgc8af60e">5.10.1. <span class="done DONE">DONE</span> test todo item 2</a></li>
+<li><a href="#org7cd3669">5.10.2. <span class="done DONE">DONE</span> table</a></li>
+<li><a href="#org94ba442">5.10.3. <span class="todo TODO">TODO</span> lists</a>
 <ul>
-<li><a href="#orgb274d83">3.19.1. include from another file</a></li>
+<li><a href="#orgb38bbef">5.10.3.1. <span class="todo TODO">TODO</span> bullets</a></li>
+<li><a href="#org9f0aa31">5.10.3.2. <span class="todo TODO">TODO</span> numbers</a></li>
 </ul>
 </li>
-<li><a href="#orge1f3104">3.20. <span class="todo TODO">TODO</span> arrange two views next to eachother (eg figure and some figure text) using css grid (might be split between here and css). is ther a way to include the css here? can't we tangle to a file</a></li>
-<li><a href="#org31b3145">3.21. How this site is built</a>
+<li><a href="#org05eea55">5.10.4. <span class="todo TODO">TODO</span> formatting</a></li>
+</ul>
+</li>
+<li><a href="#org2868f8b">5.11. <span class="todo TODO">TODO</span> code</a>
 <ul>
-<li><a href="#org56e0472">3.21.1. minimap</a>
+<li><a href="#orgcbabf13">5.11.1. <span class="todo TODO">TODO</span> bash</a></li>
+<li><a href="#org0c184d9">5.11.2. <span class="todo TODO">TODO</span> python</a>
 <ul>
-<li><a href="#org312f7ac">3.21.1.1. CSS</a></li>
-<li><a href="#org77e2291">3.21.1.2. Javascript</a></li>
+<li><a href="#org7ddb304">5.11.2.1. <span class="todo TODO">TODO</span> using venv</a></li>
+<li><a href="#org23d8baa">5.11.2.2. <span class="todo TODO">TODO</span> using multiple venvs via session</a></li>
+<li><a href="#org539adb7">5.11.2.3. <span class="todo TODO">TODO</span> using session to pass state between blocks</a></li>
 </ul>
 </li>
-<li><a href="#org90cad87">3.21.2. progress-bar</a>
+</ul>
+</li>
+<li><a href="#orgfa9a1a9">5.12. <span class="todo TODO">TODO</span> video (test with git lfs)</a></li>
+<li><a href="#org48a222e">5.13. <span class="todo TODO">TODO</span> image</a>
 <ul>
-<li><a href="#orgd0345dd">3.21.2.1. CSS</a></li>
-<li><a href="#orgd5ba574">3.21.2.2. Javascript</a></li>
+<li><a href="#orga9d31d0">5.13.1. <span class="done DONE">DONE</span> local file</a></li>
+<li><a href="#org80d6fe4">5.13.2. <span class="todo TODO">TODO</span> remote file</a></li>
+<li><a href="#orgb1d99ba">5.13.3. <span class="todo TODO">TODO</span> svg</a></li>
 </ul>
 </li>
-<li><a href="#org6f6d4bd">3.21.3. footnotes</a>
+<li><a href="#org8fa1b00">5.14. <span class="done DONE">DONE</span> general iframe</a></li>
+<li><a href="#orgd2b343e">5.15. <span class="done DONE">DONE</span> plotly chart</a></li>
+<li><a href="#orgeb5ff51">5.16. <span class="done DONE">DONE</span> mermaid diagrams</a></li>
+<li><a href="#org6a5a572">5.17. <span class="todo TODO">TODO</span> verbs</a></li>
+<li><a href="#org447216b">5.18. <span class="todo TODO">TODO</span> footnotes NOTE issue</a>
 <ul>
-<li><a href="#org3b1a358">3.21.3.1. CSS</a></li>
-<li><a href="#org6d04b6a">3.21.3.2. Javascript</a></li>
+<li><a href="#orgcf86c60">5.18.1. Another footnote</a></li>
 </ul>
 </li>
-<li><a href="#org524f3e8">3.21.4. foldable-headings</a>
+<li><a href="#orgfdf0f17">5.19. <span class="todo TODO">TODO</span> transclude? compose with other file?</a>
 <ul>
-<li><a href="#orgc48154a">3.21.4.1. CSS</a></li>
-<li><a href="#org3851b1c">3.21.4.2. Javascript</a></li>
+<li><a href="#orgbee8048">5.19.1. include from another file</a></li>
 </ul>
 </li>
-<li><a href="#org5fa3b98">3.21.5. toc</a>
+<li><a href="#org7b4f1d5">5.20. <span class="todo TODO">TODO</span> arrange two views next to eachother (eg figure and some figure text) using css grid (might be split between here and css). is ther a way to include the css here? can't we tangle to a file</a></li>
+<li><a href="#orgc58f801">5.21. How this site is built</a>
 <ul>
-<li><a href="#org7971fbc">3.21.5.1. CSS</a></li>
-<li><a href="#org37b3626">3.21.5.2. Javascript</a></li>
+<li><a href="#orgcbac588">5.21.1. minimap</a>
+<ul>
+<li><a href="#org032deb2">5.21.1.1. CSS</a></li>
+<li><a href="#org5d2a975">5.21.1.2. Javascript</a></li>
+</ul>
+</li>
+<li><a href="#orgbf4dcf0">5.21.2. progress-bar</a>
+<ul>
+<li><a href="#org4231b0b">5.21.2.1. CSS</a></li>
+<li><a href="#org6a180e7">5.21.2.2. Javascript</a></li>
+</ul>
+</li>
+<li><a href="#org806f9d0">5.21.3. footnotes</a>
+<ul>
+<li><a href="#orgdc3951c">5.21.3.1. CSS</a></li>
+<li><a href="#orgee39952">5.21.3.2. Javascript</a></li>
+</ul>
+</li>
+<li><a href="#org6476655">5.21.4. foldable-headings</a>
+<ul>
+<li><a href="#org6ac54cd">5.21.4.1. CSS</a></li>
+<li><a href="#org9cdb49f">5.21.4.2. Javascript</a></li>
+</ul>
+</li>
+<li><a href="#org9b5cd5a">5.21.5. toc</a>
+<ul>
+<li><a href="#orga12b009">5.21.5.1. CSS</a></li>
+<li><a href="#org516c753">5.21.5.2. Javascript</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#tldr">4. Generate a TLDR for this document that will be displayed at the top of the static-site version of this document.  Include internal org links to headings in this document where relevant. Org links look like this: *Footnotes. Do not use any bullets for the explanation, but you can use line breaks to help with readability.  Be verbose and describe as many sections as possible</a></li>
+<li><a href="#tldr">6. Generate a TLDR for this document that will be displayed at the top of the static-site version of this document.  Include internal org links to headings in this document where relevant. Org links look like this: *Footnotes. Do not use any bullets for the explanation, but you can use line breaks to help with readability.  Be verbose and describe as many sections as possible</a></li>
 </ul>
 </div>
 </div>
 <p>
 NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the default 4 levels (this is needed for folding)
 </p>
-<div id="outline-container-org3b85a42" class="outline-2">
-<h2 id="org3b85a42"><span class="section-number-2">1.</span> Progress bar</h2>
+<div id="outline-container-org98f5f15" class="outline-2">
+<h2 id="org98f5f15"><span class="section-number-2">1.</span> Inclusion from another org file</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga49c62f" class="outline-3">
+<h3 id="orga49c62f"><span class="section-number-3">1.1.</span> Hello from post nested</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+This is a top level heading in the included file
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org961e86d" class="outline-2">
+<h2 id="org961e86d"><span class="section-number-2">2.</span> iconography</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://github.com/file-icons/atom/blob/master/styles/icons.less">https://github.com/file-icons/atom/blob/master/styles/icons.less</a>
+</p>
+<i class="icon binary-icon">binary-icon</i>
+<i class="icon book-icon">book-icon</i>
+<i class="icon checklist-icon">checklist-icon</i>
+<i class="icon code-icon">code-icon</i>
+<i class="icon database-icon">database-icon</i>
+<i class="icon gear-icon">gear-icon</i>
+<i class="icon git-commit-icon">git-commit-icon</i>
+<i class="icon git-merge-icon">git-merge-icon</i>
+<i class="icon github-icon">github-icon</i>
+<i class="icon graph-icon">graph-icon</i>
+<i class="icon image-icon">image-icon</i>
+<i class="icon key-icon">key-icon</i>
+<i class="icon link-icon">link-icon</i>
+<i class="icon markdown-icon">markdown-icon</i>
+<i class="icon package-icon">package-icon</i>
+<i class="icon ruby-icon">ruby-icon</i>
+<i class="icon secret-icon">secret-icon</i>
+<i class="icon squirrel-icon">squirrel-icon</i>
+<i class="icon text-icon">text-icon</i>
+<i class="icon zip-icon">zip-icon</i>
+<i class="icon anchor-icon">anchor-icon</i>
+<i class="icon android-icon">android-icon</i>
+<i class="icon at-icon">at-icon</i>
+<i class="icon audio-icon">audio-icon</i>
+<i class="icon backup-icon">backup-icon</i>
+<i class="icon bitcoin-icon">bitcoin-icon</i>
+<i class="icon book-alt-icon">book-alt-icon</i>
+<i class="icon bullhorn-icon">bullhorn-icon</i>
+<i class="icon calc-icon">calc-icon</i>
+<i class="icon calendar-icon">calendar-icon</i>
+<i class="icon coffee-icon">coffee-icon</i>
+<i class="icon css3-icon">css3-icon</i>
+<i class="icon circle-icon">circle-icon</i>
+<i class="icon download-icon">download-icon</i>
+<i class="icon earth-icon">earth-icon</i>
+<i class="icon filter-icon">filter-icon</i>
+<i class="icon gears-icon">gears-icon</i>
+<i class="icon html5-icon">html5-icon</i>
+<i class="icon lock-icon">lock-icon</i>
+<i class="icon mobile-icon">mobile-icon</i>
+<i class="icon moon-icon">moon-icon</i>
+<i class="icon music-icon">music-icon</i>
+<i class="icon print-icon">print-icon</i>
+<i class="icon question-icon">question-icon</i>
+<i class="icon recycle-icon">recycle-icon</i>
+<i class="icon rss-icon">rss-icon</i>
+<i class="icon scales-icon">scales-icon</i>
+<i class="icon smarty-icon">smarty-icon</i>
+<i class="icon sourcemap-icon">sourcemap-icon</i>
+<i class="icon sun-icon">sun-icon</i>
+<i class="icon toc-icon">toc-icon</i>
+<i class="icon wechat-icon">wechat-icon</i>
+<i class="icon youtube-icon">youtube-icon</i>
+<i class="icon apache-icon">apache-icon</i>
+<i class="icon archlinux-icon">archlinux-icon</i>
+<i class="icon c-icon">c-icon</i>
+<i class="icon cpp-icon">cpp-icon</i>
+<i class="icon csharp-icon">csharp-icon</i>
+<i class="icon debian-icon">debian-icon</i>
+<i class="icon elixir-icon">elixir-icon</i>
+<i class="icon gnome-icon">gnome-icon</i>
+<i class="icon haskell-icon">haskell-icon</i>
+<i class="icon java-icon">java-icon</i>
+<i class="icon js-icon">js-icon</i>
+<i class="icon msql-icon">msql-icon</i>
+<i class="icon objc-icon">objc-icon</i>
+<i class="icon osx-icon">osx-icon</i>
+<i class="icon pgsql-icon">pgsql-icon</i>
+<i class="icon python-icon">python-icon</i>
+<i class="icon red-hat-icon">red-hat-icon</i>
+<i class="icon scala-icon">scala-icon</i>
+<i class="icon sql-icon">sql-icon</i>
+<i class="icon svg-icon">svg-icon</i>
+<i class="icon x11-icon">x11-icon</i>
+<i class="icon angular-icon">angular-icon</i>
+<i class="icon appcelerator-icon">appcelerator-icon</i>
+<i class="icon appstore-icon">appstore-icon</i>
+<i class="icon asp-icon">asp-icon</i>
+<i class="icon atom-icon">atom-icon</i>
+<i class="icon backbone-icon">backbone-icon</i>
+<i class="icon bitbucket-icon">bitbucket-icon</i>
+<i class="icon bootstrap-icon">bootstrap-icon</i>
+<i class="icon bower-icon">bower-icon</i>
+<i class="icon chrome-icon">chrome-icon</i>
+<i class="icon clojure-icon">clojure-icon</i>
+<i class="icon compass-icon">compass-icon</i>
+<i class="icon dart-icon">dart-icon</i>
+<i class="icon dlang-icon">dlang-icon</i>
+<i class="icon dojo-icon">dojo-icon</i>
+<i class="icon dropbox-icon">dropbox-icon</i>
+<i class="icon eclipse-icon">eclipse-icon</i>
+<i class="icon erlang-icon">erlang-icon</i>
+<i class="icon extjs-icon">extjs-icon</i>
+<i class="icon firefox-icon">firefox-icon</i>
+<i class="icon fsharp-icon">fsharp-icon</i>
+<i class="icon git-icon">git-icon</i>
+<i class="icon heroku-icon">heroku-icon</i>
+<i class="icon jekyll-icon">jekyll-icon</i>
+<i class="icon jira-icon">jira-icon</i>
+<i class="icon jquery-icon">jquery-icon</i>
+<i class="icon jqueryui-icon">jqueryui-icon</i>
+<i class="icon laravel-old-icon">laravel-old-icon</i>
+<i class="icon materialize-icon">materialize-icon</i>
+<i class="icon modernizr-icon">modernizr-icon</i>
+<i class="icon mootools-icon">mootools-icon</i>
+<i class="icon node-icon">node-icon</i>
+<i class="icon perl-icon">perl-icon</i>
+<i class="icon prolog-icon">prolog-icon</i>
+<i class="icon rails-icon">rails-icon</i>
+<i class="icon raphael-icon">raphael-icon</i>
+<i class="icon requirejs-icon">requirejs-icon</i>
+<i class="icon rust-icon">rust-icon</i>
+<i class="icon safari-icon">safari-icon</i>
+<i class="icon sass-icon">sass-icon</i>
+<i class="icon sencha-icon">sencha-icon</i>
+<i class="icon snapsvg-icon">snapsvg-icon</i>
+<i class="icon swift-icon">swift-icon</i>
+<i class="icon travis-icon">travis-icon</i>
+<i class="icon typo3-icon">typo3-icon</i>
+<i class="icon uikit-icon">uikit-icon</i>
+<i class="icon unity3d-icon">unity3d-icon</i>
+<i class="icon vim-icon">vim-icon</i>
+<i class="icon vs-icon">vs-icon</i>
+<i class="icon windows-icon">windows-icon</i>
+<i class="icon yeoman-icon">yeoman-icon</i>
+<i class="icon _1c-icon">_1c-icon</i>
+<i class="icon _1c-alt-icon">_1c-alt-icon</i>
+<i class="icon _4d-icon">_4d-icon</i>
+<i class="icon a-plus-icon">a-plus-icon</i>
+<i class="icon abap-icon">abap-icon</i>
+<i class="icon abif-icon">abif-icon</i>
+<i class="icon access-icon">access-icon</i>
+<i class="icon acre-icon">acre-icon</i>
+<i class="icon ada-icon">ada-icon</i>
+<i class="icon adobe-cc-icon">adobe-cc-icon</i>
+<i class="icon ae-icon">ae-icon</i>
+<i class="icon affectscript-icon">affectscript-icon</i>
+<i class="icon affinity-icon">affinity-icon</i>
+<i class="icon agda-icon">agda-icon</i>
+<i class="icon ahk-icon">ahk-icon</i>
+<i class="icon ai-icon">ai-icon</i>
+<i class="icon alacritty-icon">alacritty-icon</i>
+<i class="icon alacritty-alt-icon">alacritty-alt-icon</i>
+<i class="icon alex-icon">alex-icon</i>
+<i class="icon alloy-icon">alloy-icon</i>
+<i class="icon alpine-icon">alpine-icon</i>
+<i class="icon ampl-icon">ampl-icon</i>
+<i class="icon amusewiki-icon">amusewiki-icon</i>
+<i class="icon amx-icon">amx-icon</i>
+<i class="icon analytica-icon">analytica-icon</i>
+<i class="icon angelscript-icon">angelscript-icon</i>
+<i class="icon animate-icon">animate-icon</i>
+<i class="icon animestudio-icon">animestudio-icon</i>
+<i class="icon ansible-icon">ansible-icon</i>
+<i class="icon ant-icon">ant-icon</i>
+<i class="icon antlr-icon">antlr-icon</i>
+<i class="icon antwar-icon">antwar-icon</i>
+<i class="icon anyscript-icon">anyscript-icon</i>
+<i class="icon api-icon">api-icon</i>
+<i class="icon apiextractor-icon">apiextractor-icon</i>
+<i class="icon apl-icon">apl-icon</i>
+<i class="icon apollo-icon">apollo-icon</i>
+<i class="icon apple-icon">apple-icon</i>
+<i class="icon appveyor-icon">appveyor-icon</i>
+<i class="icon arc-icon">arc-icon</i>
+<i class="icon arduino-icon">arduino-icon</i>
+<i class="icon arttext-icon">arttext-icon</i>
+<i class="icon arttext4-icon">arttext4-icon</i>
+<i class="icon as-icon">as-icon</i>
+<i class="icon asciidoc-icon">asciidoc-icon</i>
+<i class="icon asciidoctor-icon">asciidoctor-icon</i>
+<i class="icon asm-icon">asm-icon</i>
+<i class="icon asm-agc-icon">asm-agc-icon</i>
+<i class="icon asm-arm-icon">asm-arm-icon</i>
+<i class="icon asm-avr-icon">asm-avr-icon</i>
+<i class="icon asm-hitachi-icon">asm-hitachi-icon</i>
+<i class="icon asm-intel-icon">asm-intel-icon</i>
+<i class="icon asm-m68k-icon">asm-m68k-icon</i>
+<i class="icon asm-vax-icon">asm-vax-icon</i>
+<i class="icon asm-zilog-icon">asm-zilog-icon</i>
+<i class="icon asymptote-icon">asymptote-icon</i>
+<i class="icon atoum-icon">atoum-icon</i>
+<i class="icon ats-icon">ats-icon</i>
+<i class="icon audacity-icon">audacity-icon</i>
+<i class="icon augeas-icon">augeas-icon</i>
+<i class="icon aurelia-icon">aurelia-icon</i>
+<i class="icon autoit-icon">autoit-icon</i>
+<i class="icon automator-icon">automator-icon</i>
+<i class="icon awk-icon">awk-icon</i>
+<i class="icon azurepipelines-icon">azurepipelines-icon</i>
+<i class="icon avro-icon">avro-icon</i>
+<i class="icon babel-icon">babel-icon</i>
+<i class="icon ballerina-icon">ballerina-icon</i>
+<i class="icon bazaar-icon">bazaar-icon</i>
+<i class="icon bazel-icon">bazel-icon</i>
+<i class="icon behat-icon">behat-icon</i>
+<i class="icon bem-icon">bem-icon</i>
+<i class="icon bibtex-icon">bibtex-icon</i>
+<i class="icon bikeshed-icon">bikeshed-icon</i>
+<i class="icon biml-icon">biml-icon</i>
+<i class="icon binder-icon">binder-icon</i>
+<i class="icon bintray-icon">bintray-icon</i>
+<i class="icon bison-icon">bison-icon</i>
+<i class="icon bithound-icon">bithound-icon</i>
+<i class="icon blender-icon">blender-icon</i>
+<i class="icon blitzbasic-icon">blitzbasic-icon</i>
+<i class="icon bloc-icon">bloc-icon</i>
+<i class="icon bluespec-icon">bluespec-icon</i>
+<i class="icon bnf-icon">bnf-icon</i>
+<i class="icon boo-icon">boo-icon</i>
+<i class="icon boot-icon">boot-icon</i>
+<i class="icon bors-icon">bors-icon</i>
+<i class="icon bosque-icon">bosque-icon</i>
+<i class="icon brain-icon">brain-icon</i>
+<i class="icon brakeman-icon">brakeman-icon</i>
+<i class="icon brew-icon">brew-icon</i>
+<i class="icon bro-icon">bro-icon</i>
+<i class="icon broccoli-icon">broccoli-icon</i>
+<i class="icon brotli-icon">brotli-icon</i>
+<i class="icon browserslist-icon">browserslist-icon</i>
+<i class="icon browsersync-icon">browsersync-icon</i>
+<i class="icon brunch-icon">brunch-icon</i>
+<i class="icon buck-icon">buck-icon</i>
+<i class="icon buildkite-icon">buildkite-icon</i>
+<i class="icon bundler-icon">bundler-icon</i>
+<i class="icon byond-icon">byond-icon</i>
+<i class="icon cabal-icon">cabal-icon</i>
+<i class="icon caddy-icon">caddy-icon</i>
+<i class="icon caffe-icon">caffe-icon</i>
+<i class="icon caffe2-icon">caffe2-icon</i>
+<i class="icon cake-icon">cake-icon</i>
+<i class="icon cakefile-icon">cakefile-icon</i>
+<i class="icon cakephp-icon">cakephp-icon</i>
+<i class="icon calva-icon">calva-icon</i>
+<i class="icon carthage-icon">carthage-icon</i>
+<i class="icon casc-icon">casc-icon</i>
+<i class="icon cc-icon">cc-icon</i>
+<i class="icon cdf-icon">cdf-icon</i>
+<i class="icon ceylon-icon">ceylon-icon</i>
+<i class="icon cf-icon">cf-icon</i>
+<i class="icon chai-icon">chai-icon</i>
+<i class="icon chapel-icon">chapel-icon</i>
+<i class="icon chartjs-icon">chartjs-icon</i>
+<i class="icon cheetah3d-icon">cheetah3d-icon</i>
+<i class="icon chef-icon">chef-icon</i>
+<i class="icon chocolatey-icon">chocolatey-icon</i>
+<i class="icon chuck-icon">chuck-icon</i>
+<i class="icon circleci-icon">circleci-icon</i>
+<i class="icon cirru-icon">cirru-icon</i>
+<i class="icon cl-icon">cl-icon</i>
+<i class="icon clarion-icon">clarion-icon</i>
+<i class="icon clean-icon">clean-icon</i>
+<i class="icon click-icon">click-icon</i>
+<i class="icon clips-icon">clips-icon</i>
+<i class="icon cljs-icon">cljs-icon</i>
+<i class="icon closure-tpl-icon">closure-tpl-icon</i>
+<i class="icon cloudfoundry-icon">cloudfoundry-icon</i>
+<i class="icon cmake-icon">cmake-icon</i>
+<i class="icon cnab-icon">cnab-icon</i>
+<i class="icon cobol-icon">cobol-icon</i>
+<i class="icon cocoapods-icon">cocoapods-icon</i>
+<i class="icon codacy-icon">codacy-icon</i>
+<i class="icon codecov-icon">codecov-icon</i>
+<i class="icon codekit-icon">codekit-icon</i>
+<i class="icon codemeta-icon">codemeta-icon</i>
+<i class="icon codeship-icon">codeship-icon</i>
+<i class="icon commitlint-icon">commitlint-icon</i>
+<i class="icon composer-icon">composer-icon</i>
+<i class="icon conan-icon">conan-icon</i>
+<i class="icon conda-icon">conda-icon</i>
+<i class="icon config-icon">config-icon</i>
+<i class="icon config-coffee-icon">config-coffee-icon</i>
+<i class="icon config-go-icon">config-go-icon</i>
+<i class="icon config-hs-icon">config-hs-icon</i>
+<i class="icon config-js-icon">config-js-icon</i>
+<i class="icon config-perl-icon">config-perl-icon</i>
+<i class="icon config-python-icon">config-python-icon</i>
+<i class="icon config-react-icon">config-react-icon</i>
+<i class="icon config-ruby-icon">config-ruby-icon</i>
+<i class="icon config-rust-icon">config-rust-icon</i>
+<i class="icon config-ts-icon">config-ts-icon</i>
+<i class="icon conll-icon">conll-icon</i>
+<i class="icon coq-icon">coq-icon</i>
+<i class="icon cordova-icon">cordova-icon</i>
+<i class="icon corel-icon">corel-icon</i>
+<i class="icon coreldraw-icon">coreldraw-icon</i>
+<i class="icon coveralls-icon">coveralls-icon</i>
+<i class="icon cp-icon">cp-icon</i>
+<i class="icon cpan-icon">cpan-icon</i>
+<i class="icon cpcdosc-icon">cpcdosc-icon</i>
+<i class="icon crafttweaker-icon">crafttweaker-icon</i>
+<i class="icon creole-icon">creole-icon</i>
+<i class="icon crowdin-icon">crowdin-icon</i>
+<i class="icon crystal-icon">crystal-icon</i>
+<i class="icon csound-icon">csound-icon</i>
+<i class="icon csscript-icon">csscript-icon</i>
+<i class="icon cubit-icon">cubit-icon</i>
+<i class="icon cuneiform-icon">cuneiform-icon</i>
+<i class="icon cucumber-icon">cucumber-icon</i>
+<i class="icon curl-icon">curl-icon</i>
+<i class="icon curry-icon">curry-icon</i>
+<i class="icon cvs-icon">cvs-icon</i>
+<i class="icon cwl-icon">cwl-icon</i>
+<i class="icon cython-icon">cython-icon</i>
+<i class="icon d3-icon">d3-icon</i>
+<i class="icon dafny-icon">dafny-icon</i>
+<i class="icon darcs-icon">darcs-icon</i>
+<i class="icon dashboard-icon">dashboard-icon</i>
+<i class="icon dataweave-icon">dataweave-icon</i>
+<i class="icon dbase-icon">dbase-icon</i>
+<i class="icon dna-icon">dna-icon</i>
+<i class="icon default-icon">default-icon</i>
+<i class="icon delphi-icon">delphi-icon</i>
+<i class="icon deno-icon">deno-icon</i>
+<i class="icon dependabot-icon">dependabot-icon</i>
+<i class="icon devcontainer-icon">devcontainer-icon</i>
+<i class="icon devicetree-icon">devicetree-icon</i>
+<i class="icon dhall-icon">dhall-icon</i>
+<i class="icon dia-icon">dia-icon</i>
+<i class="icon digdag-icon">digdag-icon</i>
+<i class="icon diff-icon">diff-icon</i>
+<i class="icon docbook-icon">docbook-icon</i>
+<i class="icon docker-icon">docker-icon</i>
+<i class="icon doclets-icon">doclets-icon</i>
+<i class="icon docpad-icon">docpad-icon</i>
+<i class="icon docz-icon">docz-icon</i>
+<i class="icon doge-icon">doge-icon</i>
+<i class="icon dosbox-icon">dosbox-icon</i>
+<i class="icon dotenv-icon">dotenv-icon</i>
+<i class="icon dotjs-icon">dotjs-icon</i>
+<i class="icon doxygen-icon">doxygen-icon</i>
+<i class="icon dragula-icon">dragula-icon</i>
+<i class="icon drawio-icon">drawio-icon</i>
+<i class="icon drone-icon">drone-icon</i>
+<i class="icon dub-icon">dub-icon</i>
+<i class="icon dvc-icon">dvc-icon</i>
+<i class="icon dyalog-icon">dyalog-icon</i>
+<i class="icon dylib-icon">dylib-icon</i>
+<i class="icon e-icon">e-icon</i>
+<i class="icon eagle-icon">eagle-icon</i>
+<i class="icon easybuild-icon">easybuild-icon</i>
+<i class="icon ec-icon">ec-icon</i>
+<i class="icon ecere-icon">ecere-icon</i>
+<i class="icon eclipse-lang-icon">eclipse-lang-icon</i>
+<i class="icon editorconfig-icon">editorconfig-icon</i>
+<i class="icon edge-icon">edge-icon</i>
+<i class="icon eiffel-icon">eiffel-icon</i>
+<i class="icon ejs-icon">ejs-icon</i>
+<i class="icon electron-icon">electron-icon</i>
+<i class="icon elm-icon">elm-icon</i>
+<i class="icon em-icon">em-icon</i>
+<i class="icon emacs-icon">emacs-icon</i>
+<i class="icon ember-icon">ember-icon</i>
+<i class="icon ensime-icon">ensime-icon</i>
+<i class="icon eq-icon">eq-icon</i>
+<i class="icon esdoc-icon">esdoc-icon</i>
+<i class="icon eslint-icon">eslint-icon</i>
+<i class="icon excel-icon">excel-icon</i>
+<i class="icon expo-icon">expo-icon</i>
+<i class="icon fabric-icon">fabric-icon</i>
+<i class="icon fabfile-icon">fabfile-icon</i>
+<i class="icon factor-icon">factor-icon</i>
+<i class="icon falcon-icon">falcon-icon</i>
+<i class="icon fancy-icon">fancy-icon</i>
+<i class="icon fantom-icon">fantom-icon</i>
+<i class="icon fauna-icon">fauna-icon</i>
+<i class="icon faust-icon">faust-icon</i>
+<i class="icon fbx-icon">fbx-icon</i>
+<i class="icon fexl-icon">fexl-icon</i>
+<i class="icon ff-icon">ff-icon</i>
+<i class="icon figma-icon">figma-icon</i>
+<i class="icon finaldraft-icon">finaldraft-icon</i>
+<i class="icon finder-icon">finder-icon</i>
+<i class="icon firebase-icon">firebase-icon</i>
+<i class="icon firebase-bolt-icon">firebase-bolt-icon</i>
+<i class="icon flask-icon">flask-icon</i>
+<i class="icon floobits-icon">floobits-icon</i>
+<i class="icon flow-icon">flow-icon</i>
+<i class="icon flutter-icon">flutter-icon</i>
+<i class="icon flux-icon">flux-icon</i>
+<i class="icon font-icon">font-icon</i>
+<i class="icon font-bitmap-icon">font-bitmap-icon</i>
+<i class="icon fork-icon">fork-icon</i>
+<i class="icon fortran-icon">fortran-icon</i>
+<i class="icon fossa-icon">fossa-icon</i>
+<i class="icon fossil-icon">fossil-icon</i>
+<i class="icon fountain-icon">fountain-icon</i>
+<i class="icon franca-icon">franca-icon</i>
+<i class="icon freemarker-icon">freemarker-icon</i>
+<i class="icon frege-icon">frege-icon</i>
+<i class="icon fthtml-icon">fthtml-icon</i>
+<i class="icon ftr-icon">ftr-icon</i>
+<i class="icon fuelux-icon">fuelux-icon</i>
+<i class="icon fusebox-icon">fusebox-icon</i>
+<i class="icon futhark-icon">futhark-icon</i>
+<i class="icon gams-icon">gams-icon</i>
+<i class="icon galaxy-icon">galaxy-icon</i>
+<i class="icon galen-icon">galen-icon</i>
+<i class="icon gap-icon">gap-icon</i>
+<i class="icon gatsby-icon">gatsby-icon</i>
+<i class="icon gauss-icon">gauss-icon</i>
+<i class="icon gdb-icon">gdb-icon</i>
+<i class="icon genshi-icon">genshi-icon</i>
+<i class="icon genstat-icon">genstat-icon</i>
+<i class="icon gentoo-icon">gentoo-icon</i>
+<i class="icon gf-icon">gf-icon</i>
+<i class="icon gimp-icon">gimp-icon</i>
+<i class="icon gitlab-icon">gitlab-icon</i>
+<i class="icon gitpod-icon">gitpod-icon</i>
+<i class="icon glade-icon">glade-icon</i>
+<i class="icon glide-icon">glide-icon</i>
+<i class="icon gltf-icon">gltf-icon</i>
+<i class="icon glyphs-icon">glyphs-icon</i>
+<i class="icon gml-icon">gml-icon</i>
+<i class="icon gn-icon">gn-icon</i>
+<i class="icon gnu-icon">gnu-icon</i>
+<i class="icon gnuplot-icon">gnuplot-icon</i>
+<i class="icon go-icon">go-icon</i>
+<i class="icon godot-icon">godot-icon</i>
+<i class="icon golo-icon">golo-icon</i>
+<i class="icon goreleaser-icon">goreleaser-icon</i>
+<i class="icon gosu-icon">gosu-icon</i>
+<i class="icon gql-codegen-icon">gql-codegen-icon</i>
+<i class="icon gradle-icon">gradle-icon</i>
+<i class="icon graphite-icon">graphite-icon</i>
+<i class="icon grapher-icon">grapher-icon</i>
+<i class="icon graphql-icon">graphql-icon</i>
+<i class="icon graphviz-icon">graphviz-icon</i>
+<i class="icon greenkeeper-icon">greenkeeper-icon</i>
+<i class="icon gvdesign-icon">gvdesign-icon</i>
+<i class="icon gridsome-icon">gridsome-icon</i>
+<i class="icon groovy-icon">groovy-icon</i>
+<i class="icon grunt-icon">grunt-icon</i>
+<i class="icon gulp-icon">gulp-icon</i>
+<i class="icon hack-icon">hack-icon</i>
+<i class="icon haml-icon">haml-icon</i>
+<i class="icon hoplon-icon">hoplon-icon</i>
+<i class="icon harbour-icon">harbour-icon</i>
+<i class="icon hashicorp-icon">hashicorp-icon</i>
+<i class="icon haxe-icon">haxe-icon</i>
+<i class="icon haxedevelop-icon">haxedevelop-icon</i>
+<i class="icon helix-icon">helix-icon</i>
+<i class="icon hg-icon">hg-icon</i>
+<i class="icon hie-icon">hie-icon</i>
+<i class="icon hjson-icon">hjson-icon</i>
+<i class="icon houdini-icon">houdini-icon</i>
+<i class="icon houndci-icon">houndci-icon</i>
+<i class="icon hp-icon">hp-icon</i>
+<i class="icon hy-icon">hy-icon</i>
+<i class="icon hygen-icon">hygen-icon</i>
+<i class="icon hyper-icon">hyper-icon</i>
+<i class="icon kibo-icon">kibo-icon</i>
+<i class="icon kx-icon">kx-icon</i>
+<i class="icon husky-icon">husky-icon</i>
+<i class="icon icomoon-icon">icomoon-icon</i>
+<i class="icon idl-icon">idl-icon</i>
+<i class="icon idris-icon">idris-icon</i>
+<i class="icon igorpro-icon">igorpro-icon</i>
+<i class="icon indesign-icon">indesign-icon</i>
+<i class="icon infopath-icon">infopath-icon</i>
+<i class="icon inform7-icon">inform7-icon</i>
+<i class="icon inkscape-icon">inkscape-icon</i>
+<i class="icon inno-icon">inno-icon</i>
+<i class="icon imba-icon">imba-icon</i>
+<i class="icon imgbot-icon">imgbot-icon</i>
+<i class="icon ink-icon">ink-icon</i>
+<i class="icon io-icon">io-icon</i>
+<i class="icon ioke-icon">ioke-icon</i>
+<i class="icon ionic-icon">ionic-icon</i>
+<i class="icon isabelle-icon">isabelle-icon</i>
+<i class="icon istanbul-icon">istanbul-icon</i>
+<i class="icon j-icon">j-icon</i>
+<i class="icon jade-icon">jade-icon</i>
+<i class="icon jake-icon">jake-icon</i>
+<i class="icon janet-icon">janet-icon</i>
+<i class="icon jasmine-icon">jasmine-icon</i>
+<i class="icon jenkins-icon">jenkins-icon</i>
+<i class="icon jest-icon">jest-icon</i>
+<i class="icon jolie-icon">jolie-icon</i>
+<i class="icon jinja-icon">jinja-icon</i>
+<i class="icon jison-icon">jison-icon</i>
+<i class="icon jscpd-icon">jscpd-icon</i>
+<i class="icon json-icon">json-icon</i>
+<i class="icon json5-icon">json5-icon</i>
+<i class="icon jsonld-icon">jsonld-icon</i>
+<i class="icon jsonnet-icon">jsonnet-icon</i>
+<i class="icon jsx-icon">jsx-icon</i>
+<i class="icon julia-icon">julia-icon</i>
+<i class="icon junos-icon">junos-icon</i>
+<i class="icon jupyter-icon">jupyter-icon</i>
+<i class="icon kaitai-icon">kaitai-icon</i>
+<i class="icon karma-icon">karma-icon</i>
+<i class="icon keybase-icon">keybase-icon</i>
+<i class="icon keynote-icon">keynote-icon</i>
+<i class="icon khronos-icon">khronos-icon</i>
+<i class="icon kicad-icon">kicad-icon</i>
+<i class="icon kitchenci-icon">kitchenci-icon</i>
+<i class="icon kivy-icon">kivy-icon</i>
+<i class="icon knockout-icon">knockout-icon</i>
+<i class="icon kos-icon">kos-icon</i>
+<i class="icon kotlin-icon">kotlin-icon</i>
+<i class="icon krl-icon">krl-icon</i>
+<i class="icon kubernetes-icon">kubernetes-icon</i>
+<i class="icon kusto-icon">kusto-icon</i>
+<i class="icon labview-icon">labview-icon</i>
+<i class="icon laravel-icon">laravel-icon</i>
+<i class="icon lark-icon">lark-icon</i>
+<i class="icon lasso-icon">lasso-icon</i>
+<i class="icon latino-icon">latino-icon</i>
+<i class="icon leaflet-icon">leaflet-icon</i>
+<i class="icon lean-icon">lean-icon</i>
+<i class="icon lefthook-icon">lefthook-icon</i>
+<i class="icon lein-icon">lein-icon</i>
+<i class="icon lektor-icon">lektor-icon</i>
+<i class="icon lerna-icon">lerna-icon</i>
+<i class="icon lex-icon">lex-icon</i>
+<i class="icon lfe-icon">lfe-icon</i>
+<i class="icon lgtm-icon">lgtm-icon</i>
+<i class="icon lighthouse-icon">lighthouse-icon</i>
+<i class="icon lightwave-icon">lightwave-icon</i>
+<i class="icon lilypond-icon">lilypond-icon</i>
+<i class="icon lime-icon">lime-icon</i>
+<i class="icon linqpad-icon">linqpad-icon</i>
+<i class="icon lisp-icon">lisp-icon</i>
+<i class="icon llvm-icon">llvm-icon</i>
+<i class="icon logtalk-icon">logtalk-icon</i>
+<i class="icon lolcode-icon">lolcode-icon</i>
+<i class="icon lookml-icon">lookml-icon</i>
+<i class="icon ls-icon">ls-icon</i>
+<i class="icon lsl-icon">lsl-icon</i>
+<i class="icon lua-icon">lua-icon</i>
+<i class="icon lync-icon">lync-icon</i>
+<i class="icon macaulay2-icon">macaulay2-icon</i>
+<i class="icon mako-icon">mako-icon</i>
+<i class="icon manpage-icon">manpage-icon</i>
+<i class="icon mapbox-icon">mapbox-icon</i>
+<i class="icon marko-icon">marko-icon</i>
+<i class="icon markdownlint-icon">markdownlint-icon</i>
+<i class="icon mathematica-icon">mathematica-icon</i>
+<i class="icon mathjax-icon">mathjax-icon</i>
+<i class="icon matlab-icon">matlab-icon</i>
+<i class="icon matroska-icon">matroska-icon</i>
+<i class="icon max-icon">max-icon</i>
+<i class="icon maxscript-icon">maxscript-icon</i>
+<i class="icon maya-icon">maya-icon</i>
+<i class="icon mdx-icon">mdx-icon</i>
+<i class="icon mediawiki-icon">mediawiki-icon</i>
+<i class="icon melpa-icon">melpa-icon</i>
+<i class="icon mercury-icon">mercury-icon</i>
+<i class="icon mermaid-icon">mermaid-icon</i>
+<i class="icon meson-icon">meson-icon</i>
+<i class="icon metal-icon">metal-icon</i>
+<i class="icon metapost-icon">metapost-icon</i>
+<i class="icon meteor-icon">meteor-icon</i>
+<i class="icon minecraft-icon">minecraft-icon</i>
+<i class="icon minizinc-icon">minizinc-icon</i>
+<i class="icon mint-icon">mint-icon</i>
+<i class="icon mirah-icon">mirah-icon</i>
+<i class="icon miranda-icon">miranda-icon</i>
+<i class="icon mirc-icon">mirc-icon</i>
+<i class="icon mixin-icon">mixin-icon</i>
+<i class="icon mjml-icon">mjml-icon</i>
+<i class="icon mocha-icon">mocha-icon</i>
+<i class="icon model-icon">model-icon</i>
+<i class="icon modernweb-icon">modernweb-icon</i>
+<i class="icon modula2-icon">modula2-icon</i>
+<i class="icon modula3-icon">modula3-icon</i>
+<i class="icon modelica-icon">modelica-icon</i>
+<i class="icon modo-icon">modo-icon</i>
+<i class="icon moho-icon">moho-icon</i>
+<i class="icon moleculer-icon">moleculer-icon</i>
+<i class="icon moment-icon">moment-icon</i>
+<i class="icon moment-tz-icon">moment-tz-icon</i>
+<i class="icon monotone-icon">monotone-icon</i>
+<i class="icon monkey-icon">monkey-icon</i>
+<i class="icon mruby-icon">mruby-icon</i>
+<i class="icon msproject-icon">msproject-icon</i>
+<i class="icon mupad-icon">mupad-icon</i>
+<i class="icon mustache-icon">mustache-icon</i>
+<i class="icon n64-icon">n64-icon</i>
+<i class="icon nailpolish-icon">nailpolish-icon</i>
+<i class="icon nano-icon">nano-icon</i>
+<i class="icon nanoc-icon">nanoc-icon</i>
+<i class="icon nant-icon">nant-icon</i>
+<i class="icon nasm-icon">nasm-icon</i>
+<i class="icon ndepend-icon">ndepend-icon</i>
+<i class="icon neko-icon">neko-icon</i>
+<i class="icon neo4j-icon">neo4j-icon</i>
+<i class="icon neon-icon">neon-icon</i>
+<i class="icon nessus-icon">nessus-icon</i>
+<i class="icon netlify-icon">netlify-icon</i>
+<i class="icon commitizen-icon">commitizen-icon</i>
+<i class="icon netlogo-icon">netlogo-icon</i>
+<i class="icon newrelic-icon">newrelic-icon</i>
+<i class="icon nextflow-icon">nextflow-icon</i>
+<i class="icon nextjs-icon">nextjs-icon</i>
+<i class="icon nestjs-icon">nestjs-icon</i>
+<i class="icon nginx-icon">nginx-icon</i>
+<i class="icon nib-icon">nib-icon</i>
+<i class="icon nickle-icon">nickle-icon</i>
+<i class="icon nightwatch-icon">nightwatch-icon</i>
+<i class="icon nimble-icon">nimble-icon</i>
+<i class="icon nimrod-icon">nimrod-icon</i>
+<i class="icon nit-icon">nit-icon</i>
+<i class="icon nix-icon">nix-icon</i>
+<i class="icon nmap-icon">nmap-icon</i>
+<i class="icon nodemon-icon">nodemon-icon</i>
+<i class="icon nokogiri-icon">nokogiri-icon</i>
+<i class="icon nomad-icon">nomad-icon</i>
+<i class="icon noon-icon">noon-icon</i>
+<i class="icon normalize-icon">normalize-icon</i>
+<i class="icon npm-icon">npm-icon</i>
+<i class="icon nsis-icon">nsis-icon</i>
+<i class="icon nsri-icon">nsri-icon</i>
+<i class="icon nsri-alt-icon">nsri-alt-icon</i>
+<i class="icon nuclide-icon">nuclide-icon</i>
+<i class="icon nuget-icon">nuget-icon</i>
+<i class="icon numpy-icon">numpy-icon</i>
+<i class="icon nunjucks-icon">nunjucks-icon</i>
+<i class="icon nuxt-icon">nuxt-icon</i>
+<i class="icon nwscript-icon">nwscript-icon</i>
+<i class="icon nx-icon">nx-icon</i>
+<i class="icon nxc-icon">nxc-icon</i>
+<i class="icon nvidia-icon">nvidia-icon</i>
+<i class="icon oberon-icon">oberon-icon</i>
+<i class="icon objj-icon">objj-icon</i>
+<i class="icon ocaml-icon">ocaml-icon</i>
+<i class="icon octave-icon">octave-icon</i>
+<i class="icon odin-icon">odin-icon</i>
+<i class="icon omnigraffle-icon">omnigraffle-icon</i>
+<i class="icon ogone-icon">ogone-icon</i>
+<i class="icon onenote-icon">onenote-icon</i>
+<i class="icon ooc-icon">ooc-icon</i>
+<i class="icon opa-icon">opa-icon</i>
+<i class="icon openbsd-icon">openbsd-icon</i>
+<i class="icon opencl-icon">opencl-icon</i>
+<i class="icon openexr-icon">openexr-icon</i>
+<i class="icon opengl-icon">opengl-icon</i>
+<i class="icon openoffice-icon">openoffice-icon</i>
+<i class="icon openpolicy-icon">openpolicy-icon</i>
+<i class="icon openvms-icon">openvms-icon</i>
+<i class="icon openvpn-icon">openvpn-icon</i>
+<i class="icon openzfs-icon">openzfs-icon</i>
+<i class="icon org-icon">org-icon</i>
+<i class="icon outlook-icon">outlook-icon</i>
+<i class="icon owl-icon">owl-icon</i>
+<i class="icon ox-icon">ox-icon</i>
+<i class="icon oxygene-icon">oxygene-icon</i>
+<i class="icon oz-icon">oz-icon</i>
+<i class="icon p4-icon">p4-icon</i>
+<i class="icon pan-icon">pan-icon</i>
+<i class="icon papyrus-icon">papyrus-icon</i>
+<i class="icon parrot-icon">parrot-icon</i>
+<i class="icon pascal-icon">pascal-icon</i>
+<i class="icon patch-icon">patch-icon</i>
+<i class="icon patreon-icon">patreon-icon</i>
+<i class="icon pawn-icon">pawn-icon</i>
+<i class="icon pcd-icon">pcd-icon</i>
+<i class="icon peg-icon">peg-icon</i>
+<i class="icon perl6-icon">perl6-icon</i>
+<i class="icon phalcon-icon">phalcon-icon</i>
+<i class="icon phoenix-icon">phoenix-icon</i>
+<i class="icon photorec-icon">photorec-icon</i>
+<i class="icon php-icon">php-icon</i>
+<i class="icon phpunit-icon">phpunit-icon</i>
+<i class="icon phraseapp-icon">phraseapp-icon</i>
+<i class="icon pickle-icon">pickle-icon</i>
+<i class="icon pico8-icon">pico8-icon</i>
+<i class="icon picolisp-icon">picolisp-icon</i>
+<i class="icon pike-icon">pike-icon</i>
+<i class="icon pinescript-icon">pinescript-icon</i>
+<i class="icon pipenv-icon">pipenv-icon</i>
+<i class="icon platformio-icon">platformio-icon</i>
+<i class="icon pm2-icon">pm2-icon</i>
+<i class="icon pnpm-icon">pnpm-icon</i>
+<i class="icon pod-icon">pod-icon</i>
+<i class="icon pogo-icon">pogo-icon</i>
+<i class="icon pointwise-icon">pointwise-icon</i>
+<i class="icon polymer-icon">polymer-icon</i>
+<i class="icon pony-icon">pony-icon</i>
+<i class="icon postcss-icon">postcss-icon</i>
+<i class="icon postscript-icon">postscript-icon</i>
+<i class="icon povray-icon">povray-icon</i>
+<i class="icon powerbuilder-icon">powerbuilder-icon</i>
+<i class="icon powerpoint-icon">powerpoint-icon</i>
+<i class="icon powershell-icon">powershell-icon</i>
+<i class="icon precommit-icon">precommit-icon</i>
+<i class="icon premiere-icon">premiere-icon</i>
+<i class="icon prettier-icon">prettier-icon</i>
+<i class="icon prisma-icon">prisma-icon</i>
+<i class="icon processing-icon">processing-icon</i>
+<i class="icon progress-icon">progress-icon</i>
+<i class="icon proselint-icon">proselint-icon</i>
+<i class="icon pros-icon">pros-icon</i>
+<i class="icon propeller-icon">propeller-icon</i>
+<i class="icon protractor-icon">protractor-icon</i>
+<i class="icon psd-icon">psd-icon</i>
+<i class="icon publisher-icon">publisher-icon</i>
+<i class="icon pug-alt-icon">pug-alt-icon</i>
+<i class="icon pug-icon">pug-icon</i>
+<i class="icon puppet-icon">puppet-icon</i>
+<i class="icon pure-icon">pure-icon</i>
+<i class="icon purebasic-icon">purebasic-icon</i>
+<i class="icon purescript-icon">purescript-icon</i>
+<i class="icon pullapprove-icon">pullapprove-icon</i>
+<i class="icon pypi-icon">pypi-icon</i>
+<i class="icon pyret-icon">pyret-icon</i>
+<i class="icon pytest-icon">pytest-icon</i>
+<i class="icon pyup-icon">pyup-icon</i>
+<i class="icon qiskit-icon">qiskit-icon</i>
+<i class="icon qlik-icon">qlik-icon</i>
+<i class="icon qsharp-icon">qsharp-icon</i>
+<i class="icon qt-icon">qt-icon</i>
+<i class="icon quasar-icon">quasar-icon</i>
+<i class="icon r-icon">r-icon</i>
+<i class="icon racket-icon">racket-icon</i>
+<i class="icon raml-icon">raml-icon</i>
+<i class="icon rascal-icon">rascal-icon</i>
+<i class="icon razzle-icon">razzle-icon</i>
+<i class="icon rdata-icon">rdata-icon</i>
+<i class="icon rdoc-icon">rdoc-icon</i>
+<i class="icon react-icon">react-icon</i>
+<i class="icon readthedocs-icon">readthedocs-icon</i>
+<i class="icon reason-icon">reason-icon</i>
+<i class="icon reasonstudios-icon">reasonstudios-icon</i>
+<i class="icon rebol-icon">rebol-icon</i>
+<i class="icon red-icon">red-icon</i>
+<i class="icon redux-icon">redux-icon</i>
+<i class="icon reek-icon">reek-icon</i>
+<i class="icon regex-icon">regex-icon</i>
+<i class="icon remark-icon">remark-icon</i>
+<i class="icon renovate-icon">renovate-icon</i>
+<i class="icon rescript-icon">rescript-icon</i>
+<i class="icon restql-icon">restql-icon</i>
+<i class="icon rexx-icon">rexx-icon</i>
+<i class="icon rhino-icon">rhino-icon</i>
+<i class="icon ring-icon">ring-icon</i>
+<i class="icon riot-icon">riot-icon</i>
+<i class="icon rmarkdown-icon">rmarkdown-icon</i>
+<i class="icon robot-icon">robot-icon</i>
+<i class="icon robots-icon">robots-icon</i>
+<i class="icon rollup-icon">rollup-icon</i>
+<i class="icon rspec-icon">rspec-icon</i>
+<i class="icon rst-icon">rst-icon</i>
+<i class="icon rstudio-icon">rstudio-icon</i>
+<i class="icon rsync-icon">rsync-icon</i>
+<i class="icon rubocop-icon">rubocop-icon</i>
+<i class="icon rubygems-icon">rubygems-icon</i>
+<i class="icon sac-icon">sac-icon</i>
+<i class="icon sage-icon">sage-icon</i>
+<i class="icon sails-icon">sails-icon</i>
+<i class="icon saltstack-icon">saltstack-icon</i>
+<i class="icon sas-icon">sas-icon</i>
+<i class="icon san-icon">san-icon</i>
+<i class="icon sandbox-icon">sandbox-icon</i>
+<i class="icon sbt-icon">sbt-icon</i>
+<i class="icon scad-icon">scad-icon</i>
+<i class="icon scd-icon">scd-icon</i>
+<i class="icon scheme-icon">scheme-icon</i>
+<i class="icon scilab-icon">scilab-icon</i>
+<i class="icon scilla-icon">scilla-icon</i>
+<i class="icon scratch-icon">scratch-icon</i>
+<i class="icon scrutinizer-icon">scrutinizer-icon</i>
+<i class="icon self-icon">self-icon</i>
+<i class="icon semrelease-icon">semrelease-icon</i>
+<i class="icon sentry-icon">sentry-icon</i>
+<i class="icon serverless-icon">serverless-icon</i>
+<i class="icon sequelize-icon">sequelize-icon</i>
+<i class="icon sf-icon">sf-icon</i>
+<i class="icon sgi-icon">sgi-icon</i>
+<i class="icon shadowcljs-icon">shadowcljs-icon</i>
+<i class="icon shellcheck-icon">shellcheck-icon</i>
+<i class="icon shen-icon">shen-icon</i>
+<i class="icon shipit-icon">shipit-icon</i>
+<i class="icon shippable-icon">shippable-icon</i>
+<i class="icon shopify-icon">shopify-icon</i>
+<i class="icon shuriken-icon">shuriken-icon</i>
+<i class="icon sigils-icon">sigils-icon</i>
+<i class="icon silverstripe-icon">silverstripe-icon</i>
+<i class="icon sketch-icon">sketch-icon</i>
+<i class="icon sketchup-lo-icon">sketchup-lo-icon</i>
+<i class="icon sketchup-mk-icon">sketchup-mk-icon</i>
+<i class="icon sketchup-sb-icon">sketchup-sb-icon</i>
+<i class="icon slash-icon">slash-icon</i>
+<i class="icon snapcraft-icon">snapcraft-icon</i>
+<i class="icon snort-icon">snort-icon</i>
+<i class="icon snowpack-icon">snowpack-icon</i>
+<i class="icon snyk-icon">snyk-icon</i>
+<i class="icon solidarity-icon">solidarity-icon</i>
+<i class="icon solidity-icon">solidity-icon</i>
+<i class="icon sophia-icon">sophia-icon</i>
+<i class="icon sorbet-icon">sorbet-icon</i>
+<i class="icon source-icon">source-icon</i>
+<i class="icon spacengine-icon">spacengine-icon</i>
+<i class="icon spacemacs-icon">spacemacs-icon</i>
+<i class="icon sparql-icon">sparql-icon</i>
+<i class="icon sqf-icon">sqf-icon</i>
+<i class="icon sqlite-icon">sqlite-icon</i>
+<i class="icon squarespace-icon">squarespace-icon</i>
+<i class="icon stan-icon">stan-icon</i>
+<i class="icon stata-icon">stata-icon</i>
+<i class="icon stdlibjs-icon">stdlibjs-icon</i>
+<i class="icon stencil-icon">stencil-icon</i>
+<i class="icon stitches-icon">stitches-icon</i>
+<i class="icon storyist-icon">storyist-icon</i>
+<i class="icon strings-icon">strings-icon</i>
+<i class="icon stylable-icon">stylable-icon</i>
+<i class="icon storybook-icon">storybook-icon</i>
+<i class="icon stylelint-icon">stylelint-icon</i>
+<i class="icon stylishhaskell-icon">stylishhaskell-icon</i>
+<i class="icon stylus-icon">stylus-icon</i>
+<i class="icon sublime-icon">sublime-icon</i>
+<i class="icon svelte-icon">svelte-icon</i>
+<i class="icon svn-icon">svn-icon</i>
+<i class="icon swagger-icon">swagger-icon</i>
+<i class="icon sysverilog-icon">sysverilog-icon</i>
+<i class="icon tag-icon">tag-icon</i>
+<i class="icon tailwind-icon">tailwind-icon</i>
+<i class="icon tcl-icon">tcl-icon</i>
+<i class="icon telegram-icon">telegram-icon</i>
+<i class="icon templeos-icon">templeos-icon</i>
+<i class="icon terminal-icon">terminal-icon</i>
+<i class="icon tern-icon">tern-icon</i>
+<i class="icon terraform-icon">terraform-icon</i>
+<i class="icon terser-icon">terser-icon</i>
+<i class="icon testcafe-icon">testcafe-icon</i>
+<i class="icon test-coffee-icon">test-coffee-icon</i>
+<i class="icon test-dir-icon">test-dir-icon</i>
+<i class="icon test-generic-icon">test-generic-icon</i>
+<i class="icon test-go-icon">test-go-icon</i>
+<i class="icon test-hs-icon">test-hs-icon</i>
+<i class="icon test-js-icon">test-js-icon</i>
+<i class="icon test-perl-icon">test-perl-icon</i>
+<i class="icon test-python-icon">test-python-icon</i>
+<i class="icon test-react-icon">test-react-icon</i>
+<i class="icon test-ruby-icon">test-ruby-icon</i>
+<i class="icon test-rust-icon">test-rust-icon</i>
+<i class="icon test-ts-icon">test-ts-icon</i>
+<i class="icon tex-icon">tex-icon</i>
+<i class="icon textile-icon">textile-icon</i>
+<i class="icon textmate-icon">textmate-icon</i>
+<i class="icon tfs-icon">tfs-icon</i>
+<i class="icon thor-icon">thor-icon</i>
+<i class="icon tilt-icon">tilt-icon</i>
+<i class="icon tipe-icon">tipe-icon</i>
+<i class="icon tla-icon">tla-icon</i>
+<i class="icon tmux-icon">tmux-icon</i>
+<i class="icon toml-icon">toml-icon</i>
+<i class="icon tortoise-icon">tortoise-icon</i>
+<i class="icon totvs-icon">totvs-icon</i>
+<i class="icon truffle-icon">truffle-icon</i>
+<i class="icon ts-icon">ts-icon</i>
+<i class="icon tsx-icon">tsx-icon</i>
+<i class="icon tt-icon">tt-icon</i>
+<i class="icon ttcn3-icon">ttcn3-icon</i>
+<i class="icon turing-icon">turing-icon</i>
+<i class="icon twine-icon">twine-icon</i>
+<i class="icon twig-icon">twig-icon</i>
+<i class="icon txl-icon">txl-icon</i>
+<i class="icon typedoc-icon">typedoc-icon</i>
+<i class="icon typings-icon">typings-icon</i>
+<i class="icon ufo-icon">ufo-icon</i>
+<i class="icon unibeautify-icon">unibeautify-icon</i>
+<i class="icon unicode-icon">unicode-icon</i>
+<i class="icon uno-icon">uno-icon</i>
+<i class="icon unreal-icon">unreal-icon</i>
+<i class="icon urweb-icon">urweb-icon</i>
+<i class="icon v-icon">v-icon</i>
+<i class="icon v8-icon">v8-icon</i>
+<i class="icon v8-turbofan-icon">v8-turbofan-icon</i>
+<i class="icon vagrant-icon">vagrant-icon</i>
+<i class="icon vala-icon">vala-icon</i>
+<i class="icon varnish-icon">varnish-icon</i>
+<i class="icon velocity-icon">velocity-icon</i>
+<i class="icon verilog-icon">verilog-icon</i>
+<i class="icon vertex-icon">vertex-icon</i>
+<i class="icon vhdl-icon">vhdl-icon</i>
+<i class="icon video-icon">video-icon</i>
+<i class="icon virtualbox-icon">virtualbox-icon</i>
+<i class="icon vite-icon">vite-icon</i>
+<i class="icon visio-icon">visio-icon</i>
+<i class="icon vmware-icon">vmware-icon</i>
+<i class="icon vray-icon">vray-icon</i>
+<i class="icon vue-icon">vue-icon</i>
+<i class="icon vyper-icon">vyper-icon</i>
+<i class="icon vsts-icon">vsts-icon</i>
+<i class="icon w3c-icon">w3c-icon</i>
+<i class="icon wallaby-icon">wallaby-icon</i>
+<i class="icon walt-icon">walt-icon</i>
+<i class="icon warcraft3-icon">warcraft3-icon</i>
+<i class="icon wasm-icon">wasm-icon</i>
+<i class="icon watchman-icon">watchman-icon</i>
+<i class="icon wenyan-icon">wenyan-icon</i>
+<i class="icon wdl-icon">wdl-icon</i>
+<i class="icon webgl-icon">webgl-icon</i>
+<i class="icon webhint-icon">webhint-icon</i>
+<i class="icon webpack-icon">webpack-icon</i>
+<i class="icon webvtt-icon">webvtt-icon</i>
+<i class="icon wercker-icon">wercker-icon</i>
+<i class="icon wget-icon">wget-icon</i>
+<i class="icon wine-icon">wine-icon</i>
+<i class="icon windi-icon">windi-icon</i>
+<i class="icon winui-icon">winui-icon</i>
+<i class="icon wix-icon">wix-icon</i>
+<i class="icon wolfram-icon">wolfram-icon</i>
+<i class="icon word-icon">word-icon</i>
+<i class="icon workbox-icon">workbox-icon</i>
+<i class="icon wurst-icon">wurst-icon</i>
+<i class="icon xamarin-icon">xamarin-icon</i>
+<i class="icon x10-icon">x10-icon</i>
+<i class="icon xmake-icon">xmake-icon</i>
+<i class="icon xmos-icon">xmos-icon</i>
+<i class="icon xojo-icon">xojo-icon</i>
+<i class="icon xpages-icon">xpages-icon</i>
+<i class="icon xtend-icon">xtend-icon</i>
+<i class="icon yaml-icon">yaml-icon</i>
+<i class="icon yamllint-icon">yamllint-icon</i>
+<i class="icon yandex-icon">yandex-icon</i>
+<i class="icon yang-icon">yang-icon</i>
+<i class="icon yara-icon">yara-icon</i>
+<i class="icon yarn-icon">yarn-icon</i>
+<i class="icon yorick-icon">yorick-icon</i>
+<i class="icon yui-icon">yui-icon</i>
+<i class="icon zbrush-icon">zbrush-icon</i>
+<i class="icon zeit-icon">zeit-icon</i>
+<i class="icon zephir-icon">zephir-icon</i>
+<i class="icon zig-icon">zig-icon</i>
+<i class="icon zimpl-icon">zimpl-icon</i>
+<i class="icon zork-icon">zork-icon</i>
+</div>
+</div>
+<div id="outline-container-org451f946" class="outline-2">
+<h2 id="org451f946"><span class="section-number-2">3.</span> Progress bar</h2>
+<div class="outline-text-2" id="text-3">
 <div id="progressBar"></div>
 
 <div id="minimap-container" class="desktop-only">
-  <div id="minimap">
-    <div id="minimap-viewport"></div>
-    <!-- The content will be cloned here by JavaScript -->
-  </div>
+    <div id="minimap">
+        <div id="minimap-viewport"></div>
+        <!-- The content will be cloned here by JavaScript -->
+    </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org5464432" class="outline-2">
-<h2 id="org5464432"><span class="section-number-2">2.</span> Features to make building easier</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org2118960" class="outline-2">
+<h2 id="org2118960"><span class="section-number-2">4.</span> Features to make building easier</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>custom exporter for plotly? instead of having to manually insert the iframe?  maybe a python function could take care of this</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga77bea9" class="outline-2">
-<h2 id="orga77bea9"><span class="section-number-2">3.</span> narrative</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgd1cbb3a" class="outline-2">
+<h2 id="orgd1cbb3a"><span class="section-number-2">5.</span> narrative</h2>
+<div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org28f8327" class="outline-3">
-<h3 id="org28f8327"><span class="section-number-3">3.1.</span> link to CSS and JSS scripts</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org3b054c4" class="outline-3">
+<h3 id="org3b054c4"><span class="section-number-3">5.1.</span> link to CSS and JSS scripts</h3>
+<div class="outline-text-3" id="text-5-1">
 
 <link rel="stylesheet" href="global.css">
 <link rel="stylesheet" href="toc.css">
@@ -376,25 +1333,25 @@ NOTE #+OPTIONS: H:6 makes the exporter create outline-containers beyond the defa
 <script src="post0.js"></script>
 </div>
 </div>
-<div id="outline-container-org95db5fe" class="outline-3">
-<h3 id="org95db5fe"><span class="section-number-3">3.2.</span> Long paragraph</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org8f7d80e" class="outline-3">
+<h3 id="org8f7d80e"><span class="section-number-3">5.2.</span> Long paragraph</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> id est laborum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?  
 </p>
 </div>
 </div>
-<div id="outline-container-org09ae82b" class="outline-3">
-<h3 id="org09ae82b"><span class="section-number-3">3.3.</span> <span class="todo TODO">TODO</span> prompt LLM (is there an org gptel or something similar?)</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org4ccd593" class="outline-3">
+<h3 id="org4ccd593"><span class="section-number-3">5.3.</span> <span class="todo TODO">TODO</span> prompt LLM (is there an org gptel or something similar?)</h3>
+<div class="outline-text-3" id="text-5-3">
 </div>
 </div>
-<div id="outline-container-org83a3afe" class="outline-3">
-<h3 id="org83a3afe"><span class="section-number-3">3.4.</span> layout</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org83d3fbf" class="outline-3">
+<h3 id="org83d3fbf"><span class="section-number-3">5.4.</span> layout</h3>
+<div class="outline-text-3" id="text-5-4">
 </div>
 <div id="outline-container-my-custom-section" class="outline-4">
-<h4 id="my-custom-section"><span class="section-number-4">3.4.1.</span> css grid</h4>
+<h4 id="my-custom-section"><span class="section-number-4">5.4.1.</span> css grid</h4>
 <div class="outline-text-4" id="text-my-custom-section">
 <p>
 TODO get syntax highlighting working
@@ -414,32 +1371,32 @@ TODO get syntax highlighting working
 </div>
 </div>
 </div>
-<div id="outline-container-org4312e29" class="outline-3">
-<h3 id="org4312e29"><span class="section-number-3">3.5.</span> internal links</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-org3e9be42" class="outline-3">
+<h3 id="org3e9be42"><span class="section-number-3">5.5.</span> internal links</h3>
+<div class="outline-text-3" id="text-5-5">
 <p>
 <a href="post1.html">Post 1</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orge6f63f4" class="outline-3">
-<h3 id="orge6f63f4"><span class="section-number-3">3.6.</span> global header / site style</h3>
+<div id="outline-container-org3b6d861" class="outline-3">
+<h3 id="org3b6d861"><span class="section-number-3">5.6.</span> global header / site style</h3>
 </div>
-<div id="outline-container-org164ff7a" class="outline-3">
-<h3 id="org164ff7a"><span class="section-number-3">3.7.</span> <span class="done DONE">DONE</span> styling</h3>
-<div class="outline-text-3" id="text-3-7">
+<div id="outline-container-org4cae216" class="outline-3">
+<h3 id="org4cae216"><span class="section-number-3">5.7.</span> <span class="done DONE">DONE</span> styling</h3>
+<div class="outline-text-3" id="text-5-7">
 </div>
-<div id="outline-container-org6bec740" class="outline-4">
-<h4 id="org6bec740"><span class="section-number-4">3.7.1.</span> <span class="done DONE">DONE</span> inline css</h4>
-<div class="outline-text-4" id="text-3-7-1">
+<div id="outline-container-org85da7b2" class="outline-4">
+<h4 id="org85da7b2"><span class="section-number-4">5.7.1.</span> <span class="done DONE">DONE</span> inline css</h4>
+<div class="outline-text-4" id="text-5-7-1">
 <style>
   .todo { font-family: monospace; color: pink; }
 </style>
 </div>
 </div>
-<div id="outline-container-org71d9130" class="outline-4">
-<h4 id="org71d9130"><span class="section-number-4">3.7.2.</span> <span class="done DONE">DONE</span> org-html-themes</h4>
-<div class="outline-text-4" id="text-3-7-2">
+<div id="outline-container-orgb9bb4af" class="outline-4">
+<h4 id="orgb9bb4af"><span class="section-number-4">5.7.2.</span> <span class="done DONE">DONE</span> org-html-themes</h4>
+<div class="outline-text-4" id="text-5-7-2">
 <p>
 <a href="https://github.com/fniessen/org-html-themes">https://github.com/fniessen/org-html-themes</a>
 <a href="https://github.com/fniessen/org-html-themes/blob/master/examples/org-mode-syntax-example.org">https://github.com/fniessen/org-html-themes/blob/master/examples/org-mode-syntax-example.org</a>
@@ -447,42 +1404,42 @@ TODO get syntax highlighting working
 </p>
 </div>
 </div>
-<div id="outline-container-orge64046c" class="outline-4">
-<h4 id="orge64046c"><span class="section-number-4">3.7.3.</span> <span class="done DONE">DONE</span> css (see above)</h4>
-<div class="outline-text-4" id="text-3-7-3">
+<div id="outline-container-orgdefc186" class="outline-4">
+<h4 id="orgdefc186"><span class="section-number-4">5.7.3.</span> <span class="done DONE">DONE</span> css (see above)</h4>
+<div class="outline-text-4" id="text-5-7-3">
 </div>
-<div id="outline-container-orgf7c4817" class="outline-5">
-<h5 id="orgf7c4817"><span class="section-number-5">3.7.3.1.</span> <span class="done DONE">DONE</span> global css</h5>
-<div class="outline-text-5" id="text-3-7-3-1">
-</div>
-</div>
-<div id="outline-container-orgda3e1b2" class="outline-5">
-<h5 id="orgda3e1b2"><span class="section-number-5">3.7.3.2.</span> <span class="done DONE">DONE</span> local css</h5>
-<div class="outline-text-5" id="text-3-7-3-2">
+<div id="outline-container-org461e07e" class="outline-5">
+<h5 id="org461e07e"><span class="section-number-5">5.7.3.1.</span> <span class="done DONE">DONE</span> global css</h5>
+<div class="outline-text-5" id="text-5-7-3-1">
 </div>
 </div>
+<div id="outline-container-org073164b" class="outline-5">
+<h5 id="org073164b"><span class="section-number-5">5.7.3.2.</span> <span class="done DONE">DONE</span> local css</h5>
+<div class="outline-text-5" id="text-5-7-3-2">
 </div>
 </div>
-<div id="outline-container-org2af5609" class="outline-3">
-<h3 id="org2af5609"><span class="section-number-3">3.8.</span> <span class="todo TODO">TODO</span> basic org stuff</h3>
-<div class="outline-text-3" id="text-3-8">
 </div>
 </div>
-<div id="outline-container-org50a00d1" class="outline-3">
-<h3 id="org50a00d1"><span class="section-number-3">3.9.</span> <span class="todo TODO">TODO</span> text</h3>
-<div class="outline-text-3" id="text-3-9">
+<div id="outline-container-org8cfdd52" class="outline-3">
+<h3 id="org8cfdd52"><span class="section-number-3">5.8.</span> <span class="todo TODO">TODO</span> basic org stuff</h3>
+<div class="outline-text-3" id="text-5-8">
 </div>
-<div id="outline-container-org383d7c0" class="outline-4">
-<h4 id="org383d7c0"><span class="section-number-4">3.9.1.</span> long paragraph</h4>
 </div>
-
-<div id="outline-container-orgaeffb7b" class="outline-4">
-<h4 id="orgaeffb7b"><span class="section-number-4">3.9.2.</span> long paragraph scrolling text</h4>
+<div id="outline-container-org6d4be06" class="outline-3">
+<h3 id="org6d4be06"><span class="section-number-3">5.9.</span> <span class="todo TODO">TODO</span> text</h3>
+<div class="outline-text-3" id="text-5-9">
+</div>
+<div id="outline-container-org698ba38" class="outline-4">
+<h4 id="org698ba38"><span class="section-number-4">5.9.1.</span> long paragraph</h4>
 </div>
 
-<div id="outline-container-orgaa7d00e" class="outline-4">
-<h4 id="orgaa7d00e"><span class="section-number-4">3.9.3.</span> quote</h4>
-<div class="outline-text-4" id="text-3-9-3">
+<div id="outline-container-org59f693e" class="outline-4">
+<h4 id="org59f693e"><span class="section-number-4">5.9.2.</span> long paragraph scrolling text</h4>
+</div>
+
+<div id="outline-container-org48efce8" class="outline-4">
+<h4 id="org48efce8"><span class="section-number-4">5.9.3.</span> quote</h4>
+<div class="outline-text-4" id="text-5-9-3">
 <p>
 this is some regular text
 </p>
@@ -498,17 +1455,17 @@ this is some more regular text
 </div>
 </div>
 </div>
-<div id="outline-container-orgd7a7b18" class="outline-3">
-<h3 id="orgd7a7b18"><span class="section-number-3">3.10.</span> tags&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag0">tag0</span>&#xa0;<span class="tag1">tag1</span></span></h3>
-<div class="outline-text-3" id="text-3-10">
+<div id="outline-container-org4a98095" class="outline-3">
+<h3 id="org4a98095"><span class="section-number-3">5.10.</span> tags&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag0">tag0</span>&#xa0;<span class="tag1">tag1</span></span></h3>
+<div class="outline-text-3" id="text-5-10">
 </div>
-<div id="outline-container-orge73feb9" class="outline-4">
-<h4 id="orge73feb9"><span class="section-number-4">3.10.1.</span> <span class="done DONE">DONE</span> test todo item 2</h4>
+<div id="outline-container-orgc8af60e" class="outline-4">
+<h4 id="orgc8af60e"><span class="section-number-4">5.10.1.</span> <span class="done DONE">DONE</span> test todo item 2</h4>
 </div>
-<div id="outline-container-org72deb41" class="outline-4">
-<h4 id="org72deb41"><span class="section-number-4">3.10.2.</span> <span class="done DONE">DONE</span> table</h4>
-<div class="outline-text-4" id="text-3-10-2">
-<table id="org8a35595" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<div id="outline-container-org7cd3669" class="outline-4">
+<h4 id="org7cd3669"><span class="section-number-4">5.10.2.</span> <span class="done DONE">DONE</span> table</h4>
+<div class="outline-text-4" id="text-5-10-2">
+<table id="orge8cd995" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -541,13 +1498,13 @@ this is some more regular text
 </table>
 </div>
 </div>
-<div id="outline-container-org879c67f" class="outline-4">
-<h4 id="org879c67f"><span class="section-number-4">3.10.3.</span> <span class="todo TODO">TODO</span> lists</h4>
-<div class="outline-text-4" id="text-3-10-3">
+<div id="outline-container-org94ba442" class="outline-4">
+<h4 id="org94ba442"><span class="section-number-4">5.10.3.</span> <span class="todo TODO">TODO</span> lists</h4>
+<div class="outline-text-4" id="text-5-10-3">
 </div>
-<div id="outline-container-org63ea38c" class="outline-5">
-<h5 id="org63ea38c"><span class="section-number-5">3.10.3.1.</span> <span class="todo TODO">TODO</span> bullets</h5>
-<div class="outline-text-5" id="text-3-10-3-1">
+<div id="outline-container-orgb38bbef" class="outline-5">
+<h5 id="orgb38bbef"><span class="section-number-5">5.10.3.1.</span> <span class="todo TODO">TODO</span> bullets</h5>
+<div class="outline-text-5" id="text-5-10-3-1">
 <p>
 NOTE: these render as numbers
 </p>
@@ -566,9 +1523,9 @@ NOTE: these render as numbers
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc5ec1db" class="outline-5">
-<h5 id="orgc5ec1db"><span class="section-number-5">3.10.3.2.</span> <span class="todo TODO">TODO</span> numbers</h5>
-<div class="outline-text-5" id="text-3-10-3-2">
+<div id="outline-container-org9f0aa31" class="outline-5">
+<h5 id="org9f0aa31"><span class="section-number-5">5.10.3.2.</span> <span class="todo TODO">TODO</span> numbers</h5>
+<div class="outline-text-5" id="text-5-10-3-2">
 <ol class="org-ol">
 <li>first</li>
 <li>second
@@ -580,9 +1537,9 @@ NOTE: these render as numbers
 </div>
 </div>
 </div>
-<div id="outline-container-orgb756094" class="outline-4">
-<h4 id="orgb756094"><span class="section-number-4">3.10.4.</span> <span class="todo TODO">TODO</span> formatting</h4>
-<div class="outline-text-4" id="text-3-10-4">
+<div id="outline-container-org05eea55" class="outline-4">
+<h4 id="org05eea55"><span class="section-number-4">5.10.4.</span> <span class="todo TODO">TODO</span> formatting</h4>
+<div class="outline-text-4" id="text-5-10-4">
 <ul class="org-ul">
 <li>some <b>bold</b> text</li>
 <li>some <i>italic</i> text</li>
@@ -600,13 +1557,13 @@ NOTE: these render as numbers
 </div>
 </div>
 </div>
-<div id="outline-container-org2c1911f" class="outline-3">
-<h3 id="org2c1911f"><span class="section-number-3">3.11.</span> <span class="todo TODO">TODO</span> code</h3>
-<div class="outline-text-3" id="text-3-11">
+<div id="outline-container-org2868f8b" class="outline-3">
+<h3 id="org2868f8b"><span class="section-number-3">5.11.</span> <span class="todo TODO">TODO</span> code</h3>
+<div class="outline-text-3" id="text-5-11">
 </div>
-<div id="outline-container-org5d6e2ef" class="outline-4">
-<h4 id="org5d6e2ef"><span class="section-number-4">3.11.1.</span> <span class="todo TODO">TODO</span> bash</h4>
-<div class="outline-text-4" id="text-3-11-1">
+<div id="outline-container-orgcbabf13" class="outline-4">
+<h4 id="orgcbabf13"><span class="section-number-4">5.11.1.</span> <span class="todo TODO">TODO</span> bash</h4>
+<div class="outline-text-4" id="text-5-11-1">
 <div class="org-src-container">
 <pre class="src src-bash"><span style="color: #8f0075;">echo</span> <span style="color: #3548cf;">"hello world"</span>
 </pre>
@@ -617,16 +1574,16 @@ hello world
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd2f82a2" class="outline-4">
-<h4 id="orgd2f82a2"><span class="section-number-4">3.11.2.</span> <span class="todo TODO">TODO</span> python</h4>
-<div class="outline-text-4" id="text-3-11-2">
+<div id="outline-container-org0c184d9" class="outline-4">
+<h4 id="org0c184d9"><span class="section-number-4">5.11.2.</span> <span class="todo TODO">TODO</span> python</h4>
+<div class="outline-text-4" id="text-5-11-2">
 <ul class="org-ul">
 <li>NOTE: need to set up dir-locals<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></li>
 </ul>
 </div>
-<div id="outline-container-orgeecae63" class="outline-5">
-<h5 id="orgeecae63"><span class="section-number-5">3.11.2.1.</span> <span class="todo TODO">TODO</span> using venv</h5>
-<div class="outline-text-5" id="text-3-11-2-1">
+<div id="outline-container-org7ddb304" class="outline-5">
+<h5 id="org7ddb304"><span class="section-number-5">5.11.2.1.</span> <span class="todo TODO">TODO</span> using venv</h5>
+<div class="outline-text-5" id="text-5-11-2-1">
 <p>
 This is how you write code with python<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
 </p>
@@ -663,57 +1620,57 @@ hello
 </div>
 </div>
 </div>
-<div id="outline-container-orge3b509a" class="outline-5">
-<h5 id="orge3b509a"><span class="section-number-5">3.11.2.2.</span> <span class="todo TODO">TODO</span> using multiple venvs via session</h5>
-<div class="outline-text-5" id="text-3-11-2-2">
+<div id="outline-container-org23d8baa" class="outline-5">
+<h5 id="org23d8baa"><span class="section-number-5">5.11.2.2.</span> <span class="todo TODO">TODO</span> using multiple venvs via session</h5>
+<div class="outline-text-5" id="text-5-11-2-2">
 </div>
 </div>
-<div id="outline-container-org0ece833" class="outline-5">
-<h5 id="org0ece833"><span class="section-number-5">3.11.2.3.</span> <span class="todo TODO">TODO</span> using session to pass state between blocks</h5>
-<div class="outline-text-5" id="text-3-11-2-3">
+<div id="outline-container-org539adb7" class="outline-5">
+<h5 id="org539adb7"><span class="section-number-5">5.11.2.3.</span> <span class="todo TODO">TODO</span> using session to pass state between blocks</h5>
+<div class="outline-text-5" id="text-5-11-2-3">
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org81cf59f" class="outline-3">
-<h3 id="org81cf59f"><span class="section-number-3">3.12.</span> <span class="todo TODO">TODO</span> video (test with git lfs)</h3>
-<div class="outline-text-3" id="text-3-12">
+<div id="outline-container-orgfa9a1a9" class="outline-3">
+<h3 id="orgfa9a1a9"><span class="section-number-3">5.12.</span> <span class="todo TODO">TODO</span> video (test with git lfs)</h3>
+<div class="outline-text-3" id="text-5-12">
 </div>
 </div>
-<div id="outline-container-org2efd4ef" class="outline-3">
-<h3 id="org2efd4ef"><span class="section-number-3">3.13.</span> <span class="todo TODO">TODO</span> image</h3>
-<div class="outline-text-3" id="text-3-13">
+<div id="outline-container-org48a222e" class="outline-3">
+<h3 id="org48a222e"><span class="section-number-3">5.13.</span> <span class="todo TODO">TODO</span> image</h3>
+<div class="outline-text-3" id="text-5-13">
 </div>
-<div id="outline-container-orgdd1125e" class="outline-4">
-<h4 id="orgdd1125e"><span class="section-number-4">3.13.1.</span> <span class="done DONE">DONE</span> local file</h4>
-<div class="outline-text-4" id="text-3-13-1">
+<div id="outline-container-orga9d31d0" class="outline-4">
+<h4 id="orga9d31d0"><span class="section-number-4">5.13.1.</span> <span class="done DONE">DONE</span> local file</h4>
+<div class="outline-text-4" id="text-5-13-1">
 
-<div id="orgf76cf18" class="figure">
+<div id="org046000c" class="figure">
 <p><img src="./images/test-image.png" alt="test-image.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org52a67dd" class="outline-4">
-<h4 id="org52a67dd"><span class="section-number-4">3.13.2.</span> <span class="todo TODO">TODO</span> remote file</h4>
-<div class="outline-text-4" id="text-3-13-2">
+<div id="outline-container-org80d6fe4" class="outline-4">
+<h4 id="org80d6fe4"><span class="section-number-4">5.13.2.</span> <span class="todo TODO">TODO</span> remote file</h4>
+<div class="outline-text-4" id="text-5-13-2">
 </div>
 </div>
-<div id="outline-container-org11cd727" class="outline-4">
-<h4 id="org11cd727"><span class="section-number-4">3.13.3.</span> <span class="todo TODO">TODO</span> svg</h4>
-<div class="outline-text-4" id="text-3-13-3">
+<div id="outline-container-orgb1d99ba" class="outline-4">
+<h4 id="orgb1d99ba"><span class="section-number-4">5.13.3.</span> <span class="todo TODO">TODO</span> svg</h4>
+<div class="outline-text-4" id="text-5-13-3">
 </div>
 </div>
 </div>
-<div id="outline-container-org180da3f" class="outline-3">
-<h3 id="org180da3f"><span class="section-number-3">3.14.</span> <span class="done DONE">DONE</span> general iframe</h3>
-<div class="outline-text-3" id="text-3-14">
+<div id="outline-container-org8fa1b00" class="outline-3">
+<h3 id="org8fa1b00"><span class="section-number-3">5.14.</span> <span class="done DONE">DONE</span> general iframe</h3>
+<div class="outline-text-3" id="text-5-14">
 <iframe src="https://example.com" width="100%" height="600"></iframe>
 </div>
 </div>
-<div id="outline-container-org6212128" class="outline-3">
-<h3 id="org6212128"><span class="section-number-3">3.15.</span> <span class="done DONE">DONE</span> plotly chart</h3>
-<div class="outline-text-3" id="text-3-15">
+<div id="outline-container-orgd2b343e" class="outline-3">
+<h3 id="orgd2b343e"><span class="section-number-3">5.15.</span> <span class="done DONE">DONE</span> plotly chart</h3>
+<div class="outline-text-3" id="text-5-15">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #531ab6;">import</span> plotly.express <span style="color: #531ab6;">as</span> px
 <span style="color: #531ab6;">import</span> pandas <span style="color: #531ab6;">as</span> pd
@@ -737,60 +1694,60 @@ insert iframe to chart
 <iframe src="html/my_interactive_plot.html" width="100%" height="600"></iframe>
 </div>
 </div>
-<div id="outline-container-org87d38b2" class="outline-3">
-<h3 id="org87d38b2"><span class="section-number-3">3.16.</span> <span class="done DONE">DONE</span> mermaid diagrams</h3>
-<div class="outline-text-3" id="text-3-16">
+<div id="outline-container-orgeb5ff51" class="outline-3">
+<h3 id="orgeb5ff51"><span class="section-number-3">5.16.</span> <span class="done DONE">DONE</span> mermaid diagrams</h3>
+<div class="outline-text-3" id="text-5-16">
 
-<div id="org18c1544" class="figure">
+<div id="org05f35d6" class="figure">
 <p><img src="images/test-diagram.svg" alt="test-diagram.svg" class="org-svg" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org1ac3429" class="outline-3">
-<h3 id="org1ac3429"><span class="section-number-3">3.17.</span> <span class="todo TODO">TODO</span> verbs</h3>
-<div class="outline-text-3" id="text-3-17">
+<div id="outline-container-org6a5a572" class="outline-3">
+<h3 id="org6a5a572"><span class="section-number-3">5.17.</span> <span class="todo TODO">TODO</span> verbs</h3>
+<div class="outline-text-3" id="text-5-17">
 </div>
 </div>
-<div id="outline-container-org5930fc0" class="outline-3">
-<h3 id="org5930fc0"><span class="section-number-3">3.18.</span> <span class="todo TODO">TODO</span> footnotes NOTE issue</h3>
-<div class="outline-text-3" id="text-3-18">
+<div id="outline-container-org447216b" class="outline-3">
+<h3 id="org447216b"><span class="section-number-3">5.18.</span> <span class="todo TODO">TODO</span> footnotes NOTE issue</h3>
+<div class="outline-text-3" id="text-5-18">
 <p>
 This is a footnote<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>.  And this is some other text
 </p>
 </div>
-<div id="outline-container-orgc283a8a" class="outline-4">
-<h4 id="orgc283a8a"><span class="section-number-4">3.18.1.</span> Another footnote</h4>
-<div class="outline-text-4" id="text-3-18-1">
+<div id="outline-container-orgcf86c60" class="outline-4">
+<h4 id="orgcf86c60"><span class="section-number-4">5.18.1.</span> Another footnote</h4>
+<div class="outline-text-4" id="text-5-18-1">
 <p>
 More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup> footnotes<sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup>.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org0988756" class="outline-3">
-<h3 id="org0988756"><span class="section-number-3">3.19.</span> <span class="todo TODO">TODO</span> transclude? compose with other file?</h3>
-<div class="outline-text-3" id="text-3-19">
+<div id="outline-container-orgfdf0f17" class="outline-3">
+<h3 id="orgfdf0f17"><span class="section-number-3">5.19.</span> <span class="todo TODO">TODO</span> transclude? compose with other file?</h3>
+<div class="outline-text-3" id="text-5-19">
 </div>
-<div id="outline-container-orgb274d83" class="outline-4">
-<h4 id="orgb274d83"><span class="section-number-4">3.19.1.</span> include from another file</h4>
+<div id="outline-container-orgbee8048" class="outline-4">
+<h4 id="orgbee8048"><span class="section-number-4">5.19.1.</span> include from another file</h4>
 </div>
 </div>
-<div id="outline-container-orge1f3104" class="outline-3">
-<h3 id="orge1f3104"><span class="section-number-3">3.20.</span> <span class="todo TODO">TODO</span> arrange two views next to eachother (eg figure and some figure text) using css grid (might be split between here and css). is ther a way to include the css here? can't we tangle to a file</h3>
+<div id="outline-container-org7b4f1d5" class="outline-3">
+<h3 id="org7b4f1d5"><span class="section-number-3">5.20.</span> <span class="todo TODO">TODO</span> arrange two views next to eachother (eg figure and some figure text) using css grid (might be split between here and css). is ther a way to include the css here? can't we tangle to a file</h3>
 </div>
 
-<div id="outline-container-org31b3145" class="outline-3">
-<h3 id="org31b3145"><span class="section-number-3">3.21.</span> How this site is built</h3>
-<div class="outline-text-3" id="text-3-21">
+<div id="outline-container-orgc58f801" class="outline-3">
+<h3 id="orgc58f801"><span class="section-number-3">5.21.</span> How this site is built</h3>
+<div class="outline-text-3" id="text-5-21">
 </div>
-<div id="outline-container-org56e0472" class="outline-4">
-<h4 id="org56e0472"><span class="section-number-4">3.21.1.</span> minimap</h4>
-<div class="outline-text-4" id="text-3-21-1">
+<div id="outline-container-orgcbac588" class="outline-4">
+<h4 id="orgcbac588"><span class="section-number-4">5.21.1.</span> minimap</h4>
+<div class="outline-text-4" id="text-5-21-1">
 </div>
-<div id="outline-container-org312f7ac" class="outline-5">
-<h5 id="org312f7ac"><span class="section-number-5">3.21.1.1.</span> CSS</h5>
-<div class="outline-text-5" id="text-3-21-1-1">
+<div id="outline-container-org032deb2" class="outline-5">
+<h5 id="org032deb2"><span class="section-number-5">5.21.1.1.</span> CSS</h5>
+<div class="outline-text-5" id="text-5-21-1-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #7fff7fff7fff;">/* </span><span style="color: #7fff7fff7fff;">Minimap styles</span><span style="color: #7fff7fff7fff;"> */</span>
 <span style="color: #8f0075;">@media</span> <span style="color: #000000;">(</span>min-width: 1000px<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
@@ -836,9 +1793,9 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org77e2291" class="outline-5">
-<h5 id="org77e2291"><span class="section-number-5">3.21.1.2.</span> Javascript</h5>
-<div class="outline-text-5" id="text-3-21-1-2">
+<div id="outline-container-org5d2a975" class="outline-5">
+<h5 id="org5d2a975"><span class="section-number-5">5.21.1.2.</span> Javascript</h5>
+<div class="outline-text-5" id="text-5-21-1-2">
 <div class="org-src-container">
 <pre class="src src-javascript">isMobile = window.matchMedia<span style="color: #000000;">(</span><span style="color: #3548cf;">"(min-width: 1000px)"</span><span style="color: #000000;">)</span>.matches;
 
@@ -1043,13 +2000,13 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org90cad87" class="outline-4">
-<h4 id="org90cad87"><span class="section-number-4">3.21.2.</span> progress-bar</h4>
-<div class="outline-text-4" id="text-3-21-2">
+<div id="outline-container-orgbf4dcf0" class="outline-4">
+<h4 id="orgbf4dcf0"><span class="section-number-4">5.21.2.</span> progress-bar</h4>
+<div class="outline-text-4" id="text-5-21-2">
 </div>
-<div id="outline-container-orgd0345dd" class="outline-5">
-<h5 id="orgd0345dd"><span class="section-number-5">3.21.2.1.</span> CSS</h5>
-<div class="outline-text-5" id="text-3-21-2-1">
+<div id="outline-container-org4231b0b" class="outline-5">
+<h5 id="org4231b0b"><span class="section-number-5">5.21.2.1.</span> CSS</h5>
+<div class="outline-text-5" id="text-5-21-2-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #7fff7fff7fff;">/* </span><span style="color: #7fff7fff7fff;">progress bar</span><span style="color: #7fff7fff7fff;"> */</span>
 <span style="color: #721045;">#progressBar</span> <span style="color: #000000;">{</span>
@@ -1065,9 +2022,9 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-orgd5ba574" class="outline-5">
-<h5 id="orgd5ba574"><span class="section-number-5">3.21.2.2.</span> Javascript</h5>
-<div class="outline-text-5" id="text-3-21-2-2">
+<div id="outline-container-org6a180e7" class="outline-5">
+<h5 id="org6a180e7"><span class="section-number-5">5.21.2.2.</span> Javascript</h5>
+<div class="outline-text-5" id="text-5-21-2-2">
 <div class="org-src-container">
 <pre class="src src-javascript"><span style="color: #7fff7fff7fff;">// </span><span style="color: #7fff7fff7fff;">progress bar
 </span><span style="color: #7fff7fff7fff;">// </span><span style="color: #7fff7fff7fff;">script.js
@@ -1096,13 +2053,13 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org6f6d4bd" class="outline-4">
-<h4 id="org6f6d4bd"><span class="section-number-4">3.21.3.</span> footnotes</h4>
-<div class="outline-text-4" id="text-3-21-3">
+<div id="outline-container-org806f9d0" class="outline-4">
+<h4 id="org806f9d0"><span class="section-number-4">5.21.3.</span> footnotes</h4>
+<div class="outline-text-4" id="text-5-21-3">
 </div>
-<div id="outline-container-org3b1a358" class="outline-5">
-<h5 id="org3b1a358"><span class="section-number-5">3.21.3.1.</span> CSS</h5>
-<div class="outline-text-5" id="text-3-21-3-1">
+<div id="outline-container-orgdc3951c" class="outline-5">
+<h5 id="orgdc3951c"><span class="section-number-5">5.21.3.1.</span> CSS</h5>
+<div class="outline-text-5" id="text-5-21-3-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #7fff7fff7fff;">/** </span><span style="color: #7fff7fff7fff;">sticky footnotes</span><span style="color: #7fff7fff7fff;"> **/</span>
 <span style="color: #8f0075;">@media</span> <span style="color: #000000;">(</span>min-width: 1000px<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
@@ -1161,9 +2118,9 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org6d04b6a" class="outline-5">
-<h5 id="org6d04b6a"><span class="section-number-5">3.21.3.2.</span> Javascript</h5>
-<div class="outline-text-5" id="text-3-21-3-2">
+<div id="outline-container-orgee39952" class="outline-5">
+<h5 id="orgee39952"><span class="section-number-5">5.21.3.2.</span> Javascript</h5>
+<div class="outline-text-5" id="text-5-21-3-2">
 <div class="org-src-container">
 <pre class="src src-javascript">isMobile = window.matchMedia<span style="color: #000000;">(</span><span style="color: #3548cf;">"(min-width: 1000px)"</span><span style="color: #000000;">)</span>.matches;
 
@@ -1281,13 +2238,13 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org524f3e8" class="outline-4">
-<h4 id="org524f3e8"><span class="section-number-4">3.21.4.</span> foldable-headings</h4>
-<div class="outline-text-4" id="text-3-21-4">
+<div id="outline-container-org6476655" class="outline-4">
+<h4 id="org6476655"><span class="section-number-4">5.21.4.</span> foldable-headings</h4>
+<div class="outline-text-4" id="text-5-21-4">
 </div>
-<div id="outline-container-orgc48154a" class="outline-5">
-<h5 id="orgc48154a"><span class="section-number-5">3.21.4.1.</span> CSS</h5>
-<div class="outline-text-5" id="text-3-21-4-1">
+<div id="outline-container-org6ac54cd" class="outline-5">
+<h5 id="org6ac54cd"><span class="section-number-5">5.21.4.1.</span> CSS</h5>
+<div class="outline-text-5" id="text-5-21-4-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #721045;">.outline-6</span> <span style="color: #000000;">{</span><span style="color: #531ab6;">cursor</span>: pointer; <span style="color: #000000;">}</span>
 <span style="color: #721045;">.outline-6.folded</span> <span style="color: #000000;">{</span><span style="color: #531ab6;">max-height</span>: 2em; <span style="color: #531ab6;">background</span>: <span style="color: #000000; background-color: #f9f9f9;">#f9f9f9</span>; <span style="color: #531ab6;">overflow</span>: clip;<span style="color: #000000;">}</span>
@@ -1313,9 +2270,9 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org3851b1c" class="outline-5">
-<h5 id="org3851b1c"><span class="section-number-5">3.21.4.2.</span> Javascript</h5>
-<div class="outline-text-5" id="text-3-21-4-2">
+<div id="outline-container-org9cdb49f" class="outline-5">
+<h5 id="org9cdb49f"><span class="section-number-5">5.21.4.2.</span> Javascript</h5>
+<div class="outline-text-5" id="text-5-21-4-2">
 <div class="org-src-container">
 <pre class="src src-javascript"><span style="color: #7fff7fff7fff;">// </span><span style="color: #7fff7fff7fff;">Foldable divs
 </span>document.addEventListener<span style="color: #000000;">(</span><span style="color: #3548cf;">"DOMContentLoaded"</span>, <span style="color: #531ab6;">function</span> <span style="color: #dd22dd;">()</span> <span style="color: #dd22dd;">{</span>
@@ -1333,13 +2290,13 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org5fa3b98" class="outline-4">
-<h4 id="org5fa3b98"><span class="section-number-4">3.21.5.</span> toc</h4>
-<div class="outline-text-4" id="text-3-21-5">
+<div id="outline-container-org9b5cd5a" class="outline-4">
+<h4 id="org9b5cd5a"><span class="section-number-4">5.21.5.</span> toc</h4>
+<div class="outline-text-4" id="text-5-21-5">
 </div>
-<div id="outline-container-org7971fbc" class="outline-5">
-<h5 id="org7971fbc"><span class="section-number-5">3.21.5.1.</span> CSS</h5>
-<div class="outline-text-5" id="text-3-21-5-1">
+<div id="outline-container-orga12b009" class="outline-5">
+<h5 id="orga12b009"><span class="section-number-5">5.21.5.1.</span> CSS</h5>
+<div class="outline-text-5" id="text-5-21-5-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #7fff7fff7fff;">/** </span><span style="color: #7fff7fff7fff;">sticky ToC</span><span style="color: #7fff7fff7fff;"> **/</span>
 <span style="color: #8f0075;">@media</span> <span style="color: #000000;">(</span>min-width: 1000px<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
@@ -1393,9 +2350,9 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 </div>
-<div id="outline-container-org37b3626" class="outline-5">
-<h5 id="org37b3626"><span class="section-number-5">3.21.5.2.</span> Javascript</h5>
-<div class="outline-text-5" id="text-3-21-5-2">
+<div id="outline-container-org516c753" class="outline-5">
+<h5 id="org516c753"><span class="section-number-5">5.21.5.2.</span> Javascript</h5>
+<div class="outline-text-5" id="text-5-21-5-2">
 <div class="org-src-container">
 <pre class="src src-javascript">isMobile = window.matchMedia<span style="color: #000000;">(</span><span style="color: #3548cf;">"(min-width: 1000px)"</span><span style="color: #000000;">)</span>.matches;
 
@@ -1555,26 +2512,26 @@ More<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></s
 </div>
 </div>
 <div id="outline-container-tldr" class="outline-2">
-<h2 id="tldr"><span class="section-number-2">4.</span> Generate a TLDR for this document that will be displayed at the top of the static-site version of this document.  Include internal org links to headings in this document where relevant. Org links look like this: <a href="#orgef4dc90"></a>. Do not use any bullets for the explanation, but you can use line breaks to help with readability.  Be verbose and describe as many sections as possible</h2>
+<h2 id="tldr"><span class="section-number-2">6.</span> Generate a TLDR for this document that will be displayed at the top of the static-site version of this document.  Include internal org links to headings in this document where relevant. Org links look like this: <a href="#org6f62224"></a>. Do not use any bullets for the explanation, but you can use line breaks to help with readability.  Be verbose and describe as many sections as possible</h2>
 <div class="outline-text-2" id="text-tldr">
 <p>
-This document serves as a comprehensive demonstration of Org mode authoring for static sites, showing advanced features and customizations. At the top, a <a href="#org3b85a42">progress bar and minimap</a> enhance navigation. The document explores embedding <a href="#org5464432">interactive charts with Plotly</a>, and suggests automations for easier iframing. It includes <a href="#orga77bea9">narrative text</a>, CSS and JS linking details, and example paragraphs, quotes, and layout concepts.
+This document serves as a comprehensive demonstration of Org mode authoring for static sites, showing advanced features and customizations. At the top, a <a href="#org451f946">progress bar and minimap</a> enhance navigation. The document explores embedding <a href="#org2118960">interactive charts with Plotly</a>, and suggests automations for easier iframing. It includes <a href="#orgd1cbb3a">narrative text</a>, CSS and JS linking details, and example paragraphs, quotes, and layout concepts.
 </p>
 
 <p>
-There's an overview of using both <a href="#my-custom-section">modern layouts via CSS grid</a>, with practical HTML examples. Internal links (such as <a href="post1.html">Post 1</a>) and <a href="#orge6f63f4">site-wide style</a> are covered, including the use of org-html-themes, local and global CSS, and custom inline styles. 
+There's an overview of using both <a href="#my-custom-section">modern layouts via CSS grid</a>, with practical HTML examples. Internal links (such as <a href="post1.html">Post 1</a>) and <a href="#org3b6d861">site-wide style</a> are covered, including the use of org-html-themes, local and global CSS, and custom inline styles. 
 </p>
 
 <p>
-Basic Org constructs are featured under <a href="#org2af5609">3.8</a>, including <a href="#orgd7a7b18">tagged sections</a>, <a href="#org879c67f">lists and formatting</a>, and <a href="#org72deb41">tables</a>. Source code examples are provided for <a href="#org5d6e2ef">bash scripts</a> and <a href="#orgd2f82a2">python</a>, including venv and session hints. Embedding media is demonstrated with <a href="#org2efd4ef">images</a>, remote files, SVG diagrams, and eg <a href="#org87d38b2">Mermaid charts</a>. 
+Basic Org constructs are featured under <a href="#org8cfdd52">5.8</a>, including <a href="#org4a98095">tagged sections</a>, <a href="#org94ba442">lists and formatting</a>, and <a href="#org7cd3669">tables</a>. Source code examples are provided for <a href="#orgcbabf13">bash scripts</a> and <a href="#org0c184d9">python</a>, including venv and session hints. Embedding media is demonstrated with <a href="#org48a222e">images</a>, remote files, SVG diagrams, and eg <a href="#orgeb5ff51">Mermaid charts</a>. 
 </p>
 
 <p>
-There's also coverage of internal <a href="#org1ac3429">verbatim and code syntax</a>, proper handling of <a href="#orgef4dc90">footnotes with references</a>, and ideas for future transclusion and file composition.
+There's also coverage of internal <a href="#org6a5a572">verbatim and code syntax</a>, proper handling of <a href="#org6f62224">footnotes with references</a>, and ideas for future transclusion and file composition.
 </p>
 
 <p>
-Document concludes with a detailed <a href="#orgef4dc90">footnotes section</a> and plans for CSS-driven layout enhancements, including arranging multiple views or panels side by side (figures + captions) using CSS grid.
+Document concludes with a detailed <a href="#org6f62224">footnotes section</a> and plans for CSS-driven layout enhancements, including arranging multiple views or panels side by side (figures + captions) using CSS grid.
 </p>
 </div>
 </div>
